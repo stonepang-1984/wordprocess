@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="zh-CN" >
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="cache-control" content="no-siteapp">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2025年8大AI Agent框架深度评测：从LangChain到CrewAI，开发者选型终极指南 - AI生产力工具</title>
+<meta name='robots' content='max-image-preview:large' />
+<link rel='dns-prefetch' href='//challenges.cloudflare.com' />
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://www.kdjingpai.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.kdjingpai.com%2F2025nian8daai-agentai%2F" />
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://www.kdjingpai.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.kdjingpai.com%2F2025nian8daai-agentai%2F&#038;format=xml" />
+<style id='wp-img-auto-sizes-contain-inline-css' type='text/css'>
+img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
+/*# sourceURL=wp-img-auto-sizes-contain-inline-css */
+</style>
+<link rel='stylesheet' id='wxsync_main_css-css' href='https://www.kdjingpai.com/wp-content/plugins/wxsync/libs/wxsync.css?ver=1.0.2' type='text/css' media='screen' />
+<style id='wp-block-library-inline-css' type='text/css'>
+:root{--wp-block-synced-color:#7a00df;--wp-block-synced-color--rgb:122,0,223;--wp-bound-block-color:var(--wp-block-synced-color);--wp-editor-canvas-background:#ddd;--wp-admin-theme-color:#007cba;--wp-admin-theme-color--rgb:0,124,186;--wp-admin-theme-color-darker-10:#006ba1;--wp-admin-theme-color-darker-10--rgb:0,107,160.5;--wp-admin-theme-color-darker-20:#005a87;--wp-admin-theme-color-darker-20--rgb:0,90,135;--wp-admin-border-width-focus:2px}@media (min-resolution:192dpi){:root{--wp-admin-border-width-focus:1.5px}}.wp-element-button{cursor:pointer}:root .has-very-light-gray-background-color{background-color:#eee}:root .has-very-dark-gray-background-color{background-color:#313131}:root .has-very-light-gray-color{color:#eee}:root .has-very-dark-gray-color{color:#313131}:root .has-vivid-green-cyan-to-vivid-cyan-blue-gradient-background{background:linear-gradient(135deg,#00d084,#0693e3)}:root .has-purple-crush-gradient-background{background:linear-gradient(135deg,#34e2e4,#4721fb 50%,#ab1dfe)}:root .has-hazy-dawn-gradient-background{background:linear-gradient(135deg,#faaca8,#dad0ec)}:root .has-subdued-olive-gradient-background{background:linear-gradient(135deg,#fafae1,#67a671)}:root .has-atomic-cream-gradient-background{background:linear-gradient(135deg,#fdd79a,#004a59)}:root .has-nightshade-gradient-background{background:linear-gradient(135deg,#330968,#31cdcf)}:root .has-midnight-gradient-background{background:linear-gradient(135deg,#020381,#2874fc)}:root{--wp--preset--font-size--normal:16px;--wp--preset--font-size--huge:42px}.has-regular-font-size{font-size:1em}.has-larger-font-size{font-size:2.625em}.has-normal-font-size{font-size:var(--wp--preset--font-size--normal)}.has-huge-font-size{font-size:var(--wp--preset--font-size--huge)}.has-text-align-center{text-align:center}.has-text-align-left{text-align:left}.has-text-align-right{text-align:right}.has-fit-text{white-space:nowrap!important}#end-resizable-editor-section{display:none}.aligncenter{clear:both}.items-justified-left{justify-content:flex-start}.items-justified-center{justify-content:center}.items-justified-right{justify-content:flex-end}.items-justified-space-between{justify-content:space-between}.screen-reader-text{border:0;clip-path:inset(50%);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px;word-wrap:normal!important}.screen-reader-text:focus{background-color:#ddd;clip-path:none;color:#444;display:block;font-size:1em;height:auto;left:5px;line-height:normal;padding:15px 23px 14px;text-decoration:none;top:5px;width:auto;z-index:100000}html :where(.has-border-color){border-style:solid}html :where([style*=border-top-color]){border-top-style:solid}html :where([style*=border-right-color]){border-right-style:solid}html :where([style*=border-bottom-color]){border-bottom-style:solid}html :where([style*=border-left-color]){border-left-style:solid}html :where([style*=border-width]){border-style:solid}html :where([style*=border-top-width]){border-top-style:solid}html :where([style*=border-right-width]){border-right-style:solid}html :where([style*=border-bottom-width]){border-bottom-style:solid}html :where([style*=border-left-width]){border-left-style:solid}html :where(img[class*=wp-image-]){height:auto;max-width:100%}:where(figure){margin:0 0 1em}html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:var(--wp-admin--admin-bar--height,0px)}@media screen and (max-width:600px){html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:0px}}
+
+/*# sourceURL=wp-block-library-inline-css */
+</style>
+<style id='classic-theme-styles-inline-css' type='text/css'>
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+/*# sourceURL=/wp-includes/css/classic-themes.min.css */
+</style>
+<style id='global-styles-inline-css' type='text/css'>
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgb(6,147,227) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgb(252,185,0) 0%,rgb(255,105,0) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgb(255,105,0) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0);--wp--preset--shadow--crisp: 6px 6px 0px rgb(0, 0, 0);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+/*# sourceURL=global-styles-inline-css */
+</style>
+
+<link rel='stylesheet' id='tb-style-css' href='https://www.kdjingpai.com/wp-content/themes/nab-child/style.css?ver=1.0.0' type='text/css' media='' />
+<style id='tb-style-inline-css' type='text/css'>
+:root {}
+/*# sourceURL=tb-style-inline-css */
+</style>
+<link rel='stylesheet' id='trp-language-switcher-v2-css' href='https://www.kdjingpai.com/wp-content/plugins/translatepress-multilingual/assets/css/trp-language-switcher-v2.css?ver=3.0.6' type='text/css' media='all' />
+<link rel='stylesheet' id='tablepress-default-css' href='https://www.kdjingpai.com/wp-content/plugins/tablepress/css/build/default.css?ver=3.2.6' type='text/css' media='all' />
+<link rel='stylesheet' id='wbp-magicpost-css' href='https://www.kdjingpai.com/wp-content/plugins/magicpost/assets/wbp_magicpost.css?ver=2.0.0' type='text/css' media='all' />
+<link rel='stylesheet' id='nab-style-css' href='https://www.kdjingpai.com/wp-content/themes/nab/style.css?ver=6.9.1' type='text/css' media='all' />
+<link rel='stylesheet' id='nab-child-style-css' href='https://www.kdjingpai.com/wp-content/themes/nab-child/style.css?ver=6.9.1' type='text/css' media='all' />
+<script type="text/javascript" src="https://www.kdjingpai.com/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script>
+<script type="text/javascript" src="https://www.kdjingpai.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" id="jquery-migrate-js"></script>
+<script type="text/javascript" src="https://www.kdjingpai.com/wp-content/plugins/translatepress-multilingual/assets/js/trp-frontend-language-switcher.js?ver=3.0.6" id="trp-language-switcher-js-v2-js"></script>
+<link rel="https://api.w.org/" href="https://www.kdjingpai.com/wp-json/" /><link rel="alternate" title="JSON" type="application/json" href="https://www.kdjingpai.com/wp-json/wp/v2/posts/34349" /><link rel="canonical" href="https://www.kdjingpai.com/2025nian8daai-agentai/" />
+<link rel="alternate" hreflang="zh-CN" href="https://www.kdjingpai.com/2025nian8daai-agentai/"/>
+<link rel="alternate" hreflang="en-US" href="https://www.kdjingpai.com/en/2025nian8daai-agentai/"/>
+<link rel="alternate" hreflang="ja" href="https://www.kdjingpai.com/ja/2025nian8daai-agentai/"/>
+<link rel="alternate" hreflang="de-DE" href="https://www.kdjingpai.com/de/2025nian8daai-agentai/"/>
+<link rel="alternate" hreflang="pt-BR" href="https://www.kdjingpai.com/pt/2025nian8daai-agentai/"/>
+<link rel="alternate" hreflang="zh" href="https://www.kdjingpai.com/2025nian8daai-agentai/"/>
+<link rel="alternate" hreflang="en" href="https://www.kdjingpai.com/en/2025nian8daai-agentai/"/>
+<link rel="alternate" hreflang="de" href="https://www.kdjingpai.com/de/2025nian8daai-agentai/"/>
+<link rel="alternate" hreflang="pt" href="https://www.kdjingpai.com/pt/2025nian8daai-agentai/"/>
+<link rel="alternate" hreflang="x-default" href="https://www.kdjingpai.com/2025nian8daai-agentai/"/>
+<link rel="llms-sitemap" href="https://www.kdjingpai.com/llms.txt" />
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8152038832870620"
+     crossorigin="anonymous"></script><meta name="description" content="AI Agent（智能体）正推动大型语言模型（LLM）从“对话”走向“行动”。一个真正的 Agent 不仅能理解指令，还能自主规划、调用工具、并与外部环境交互，以完成复杂的任务。这背后离不开强大的开源框架支持。  当前，AI Agent 框架领域已经涌现出多个优秀项目，它们在设计哲学、任务编排、工具集成乃至多 Agen"><meta name="keywords" content="AI实操教程"><link rel="icon" href="https://www.kdjingpai.com/wp-content/uploads/2025/05/2f3e1a3c5aacd21-250x250.png" sizes="32x32" />
+<link rel="icon" href="https://www.kdjingpai.com/wp-content/uploads/2025/05/2f3e1a3c5aacd21-250x250.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://www.kdjingpai.com/wp-content/uploads/2025/05/2f3e1a3c5aacd21-250x250.png" />
+<meta name="msapplication-TileImage" content="https://www.kdjingpai.com/wp-content/uploads/2025/05/2f3e1a3c5aacd21.png" />
+</head>
+<body class="wp-singular post-template-default single single-post postid-34349 single-format-standard wp-theme-nab wp-child-theme-nab-child  by-themebetter m-site-list-one tb-rds sidebar-on translatepress-zh_CN">
+    <header class="header hd-bgc-01"><div class="logo"><a href="https://www.kdjingpai.com" data-wpel-link="internal"><img src="https://www.kdjingpai.com/wp-content/uploads/2025/05/541866eb44ac15c.png" alt="AI生产力工具" /><img class="-light" src="https://www.kdjingpai.com/wp-content/uploads/2025/05/94b85eeb24b781f.png" alt="AI生产力工具" /><span>AI生产力工具</span></a></div><ul class="tb-nav"><li class="menu-item menu-item-type-custom menu-item-object-custom depth-0 "><a href="https://www.kdjingpai.com/ai-chat/" data-event="tb_anchor" data-anchor="#menu-3" data-catid="" data-wpel-link="internal">AI对话工具<span data-event="tb_toggle_menu" class="tbfa fa-right m-a m-a-0"></span></a><ul class="sub-menu s-m-0"><li class="menu-item menu-item-type-custom menu-item-object-custom depth-1 "><a href="https://www.kdjingpai.com/ai-chat/domestic-platform/" data-event="tb_anchor" data-anchor="#menu-3|0" data-catid="405" data-wpel-link="internal">国内平台</a></li><li class="menu-item menu-item-type-custom menu-item-object-custom depth-1 "><a href="https://www.kdjingpai.com/ai-chat/overseas-platforms/" data-event="tb_anchor" data-anchor="#menu-3|1" data-catid="406" data-wpel-link="internal">海外平台</a></li><li class="menu-item menu-item-type-custom menu-item-object-custom depth-1 "><a href="https://www.kdjingpai.com/ai-chat/mobile-client/" data-event="tb_anchor" data-anchor="#menu-3|2" data-catid="421" data-wpel-link="internal">移动客户端</a></li><li class="menu-item menu-item-type-custom menu-item-object-custom depth-1 "><a href="https://www.kdjingpai.com/ai-chat/web-client/" data-event="tb_anchor" data-anchor="#menu-3|3" data-catid="422" data-wpel-link="internal">Web客户端</a></li><li class="menu-item menu-item-type-custom menu-item-object-custom depth-1 "><a href="https://www.kdjingpai.com/ai-chat/pc-client/" data-event="tb_anchor" data-anchor="#menu-3|4" data-catid="407" data-wpel-link="internal">PC客户端</a></li><li class="menu-item menu-item-type-custom menu-item-object-custom depth-1 "><a href="https://www.kdjingpai.com/ai-chat/browser-extension/" data-event="tb_anchor" data-anchor="#menu-3|5" data-catid="408" data-wpel-link="internal">浏览器AI助手</a></li><li class="menu-item menu-item-type-custom menu-item-object-custom depth-1 "><a href="https://www.kdjingpai.com/ai-chat/multi-model-platform/" data-event="tb_anchor" data-anchor="#menu-3|6" data-catid="409" data-wpel-link="internal">集成多模型平台</a></li><li class="menu-item menu-item-type-custom menu-item-object-custom depth-1 "><a href="https://www.kdjingpai.com/ai-chat/prompt-aids/" data-event="tb_anchor" data-anchor="#menu-3|7" data-catid="501" data-wpel-link="internal">Prompt辅助</a></li></ul></li><li class="menu-item menu-item-type-custom menu-item-object-custom depth-0 "><a href="https://www.kdjingpai.com/ai-art/" data-event="tb_anchor" data-anchor="#menu-4" data-catid="" data-wpel-link="internal">AI绘画<span data-event="tb_toggle_menu" class="tbfa fa-right m-a m-a-0"></span></a><ul class="sub-menu s-m-0"><li class="menu-item menu-item-type-custom menu-item-object-custom depth-1 "><a href="https://www.kdjingpai.com/ai-art/painting-platform/" data-event="tb_anchor" data-anchor="#menu-4|0" data-catid="411" data-wpel-link="internal">在线绘画</a></li><li class="menu-item menu-item-type-custom menu-item-object-custom depth-1 "><a href="https://www.kdjingpai.com/ai-art/image-editing/" data-event="tb_anchor" data-anchor="#menu-4|1" data-catid="412" data-wpel-link="internal">图像编辑</a></li><li class="menu-item menu-item-type-custom menu-item-object-custom depth-1 "><a href="https://www.kdjingpai.com/ai-art/image-style/" data-event="tb_anchor" data-anchor="#menu-4|2" data-catid="430" data-wpel-link="internal">风格控制</a></li><li class="menu-item menu-item-type-custom menu-item-object-custom depth-1 "><a href="https://www.kdjingpai.com/ai-art/identity-images/" data-event="tb_anchor" data-anchor="#menu-4|3" data-catid="443" data-wpel-link="internal">人物一致</a></li><li class="menu-item menu-item-type-custom menu-item-object-custom depth-1 "><a href="https://www.kdjingpai.com/ai-art/3d-image/" data-event="tb_anchor" data-anchor="#menu-4|4" data-catid="413" data-wpel-link="internal">3D图像</a></li><li class="menu-item menu-item-type-custom menu-item-object-custom depth-1 "><a href="https://www.kdjingpai.com/ai-art/page-design/" data-event="tb_anchor" data-anchor="#menu-4|5" data-catid="423" data-wpel-link="internal">页面设计</a></li><li class="menu-item menu-item-type-custom menu-item-object-custom depth-1 "><a href="https://www.kdjingpai.com/ai-art/painting-client/" data-event="tb_anchor" data-anchor="#menu-4|6" data-catid="414" data-wpel-link="internal">自部署绘画</a></li><li class="menu-item menu-item-type-custom menu-item-object-custom depth-1 "><a href="https://www.kdjingpai.com/ai-art/image-restoration/" data-event="tb_anchor" data-anchor="#menu-4|7" data-catid="440" data-wpel-link="internal">抠图/修复</a></li><li class="menu-item menu-item-type-custom menu-item-object-custom depth-1 "><a href="https://www.kdjingpai.com/ai-art/ai-doodle/" data-event="tb_anchor" data-anchor="#menu-4|8" data-catid="442" data-wpel-link="internal">涂鸦画布</a></li><li class="menu-item menu-item-type-custom menu-item-object-custom depth-1 "><a href="https://www.kdjingpai.com/ai-art/line-art/" data-event="tb_anchor" data-anchor="#menu-4|9" data-catid="450" data-wpel-link="internal">线稿上色</a></li><li class="menu-item menu-item-type-custom menu-item-object-custom depth-1 "><a href="https://www.kdjingpai.com/ai-art/image-assisted/" data-event="tb_anchor" data-anchor="#menu-4|10" data-catid="441" data-wpel-link="internal">图像辅助</a></li></ul></li><li class="menu-item menu-item-type-custom menu-item-object-custom depth-0 "><a href="https://www.kdjingpai.com/ai-video/" data-event="tb_anchor" data-anchor="#menu-5" data-catid="" data-wpel-link="internal">AI视频<span data-event="tb_toggle_menu" class="tbfa fa-right m-a m-a-0"></span></a><ul class="sub-menu s-m-0"><li class="menu-item menu-item-type-custom menu-item-object-custom depth-1 "><a href="https://www.kdjingpai.com/ai-video/video-generation/" data-event="tb_anchor" data-anchor="#menu-5|0" data-catid="431" data-wpel-link="internal">视频生成</a></li><li class="menu-item menu-item-type-custom menu-item-object-custom depth-1 "><a href="https://www.kdjingpai.com/ai-video/video-style/" data-event="tb_anchor" data-anchor="#menu-5|1" data-catid="432" data-wpel-link="internal">视频风格控制</a></li><li class="menu-item menu-item-type-custom menu-item-object-custom depth-1 "><a href="https://www.kdjingpai.com/ai-video/video-skits/" data-event="tb_anchor" data-anchor="#menu-5|2" data-catid="433" data-wpel-link="internal">视频短剧</a></li><li class="menu-item menu-item-type-custom menu-item-object-custom depth-1 "><a href="https://www.kdjingpai.com/ai-video/copywriting-video/" data-event="tb_anchor" data-anchor="#menu-5|3" data-catid="484" data-wpel-link="internal">文案转视频</a></li><li class="menu-item menu-item-type-custom menu-item-object-custom depth-1 "><a href="https://www.kdjingpai.com/ai-video/video-editing/" data-event="tb_anchor" data-anchor="#menu-5|4" data-catid="492" data-wpel-link="internal">视频编辑</a></li><li class="menu-item menu-item-type-custom menu-item-object-custom depth-1 "><a href="https://www.kdjingpai.com/ai-video/smart-slicing/" data-event="tb_anchor" data-anchor="#menu-5|5" data-catid="508" data-wpel-link="internal">智能切片</a></li><li class="menu-item menu-item-type-custom menu-item-object-custom depth-1 "><a href="https://www.kdjingpai.com/ai-video/video-background/" data-event="tb_anchor" data-anchor="#menu-5|6" data-catid="445" data-wpel-link="internal">移除物体/背景</a></li></ul></li><li class="menu-item menu-item-type-custom menu-item-object-custom depth-0 "><a href="https://www.kdjingpai.com/ai-audio/" data-event="tb_anchor" data-anchor="#menu-6" data-catid="" data-wpel-link="internal">AI音频<span data-event="tb_toggle_menu" class="tbfa fa-right m-a m-a-0"></span></a><ul class="sub-menu s-m-0"><li class="menu-item menu-item-type-custom menu-item-object-custom depth-1 "><a href="https://www.kdjingpai.com/ai-audio/audio-editing/" data-event="tb_anchor" data-anchor="#menu-6|0" data-catid="507" data-wpel-link="internal">音频编辑</a></li><li class="menu-item menu-item-type-custom menu-item-object-custom depth-1 "><a href="https://www.kdjingpai.com/ai-audio/speech-to-text/" data-event="tb_anchor" data-anchor="#menu-6|1" data-catid="452" data-wpel-link="internal">语音转文字</a></li><li class="menu-item menu-item-type-custom menu-item-object-custom depth-1 "><a href="https://www.kdjingpai.com/ai-audio/text-to-speech/" data-event="tb_anchor" data-anchor="#menu-6|2" data-catid="479" data-wpel-link="internal">文字转语音</a></li><li class="menu-item menu-item-type-custom menu-item-object-custom depth-1 "><a href="https://www.kdjingpai.com/ai-audio/voice-cloning/" data-event="tb_anchor" data-anchor="#menu-6|3" data-catid="480" data-wpel-link="internal">语音克隆</a></li><li class="menu-item menu-item-type-custom menu-item-object-custom depth-1 "><a href="https://www.kdjingpai.com/ai-audio/voice-interaction/" data-event="tb_anchor" data-anchor="#menu-6|4" data-catid="500" data-wpel-link="internal">语音互动</a></li></ul></li><li class="menu-item menu-item-type-custom menu-item-object-custom depth-0 "><a href="https://www.kdjingpai.com/ai-learning/" data-event="tb_anchor" data-anchor="#menu-7" data-catid="" data-wpel-link="internal">AI教育学习<span data-event="tb_toggle_menu" class="tbfa fa-right m-a m-a-0"></span></a><ul class="sub-menu s-m-0"><li class="menu-item menu-item-type-custom menu-item-object-custom depth-1 "><a href="https://www.kdjingpai.com/ai-learning/ai-writing/" data-event="tb_anchor" data-anchor="#menu-7|0" data-catid="420" data-wpel-link="internal">写作/故事创作</a></li><li class="menu-item menu-item-type-custom menu-item-object-custom depth-1 "><a href="https://www.kdjingpai.com/ai-learning/ai-search/" data-event="tb_anchor" data-anchor="#menu-7|1" data-catid="426" data-wpel-link="internal">AI搜索</a></li><li class="menu-item menu-item-type-custom menu-item-object-custom depth-1 "><a href="https://www.kdjingpai.com/ai-learning/research-assistant/" data-event="tb_anchor" data-anchor="#menu-7|2" data-catid="427" data-wpel-link="internal">深度研究智能体</a></li><li class="menu-item menu-item-type-custom menu-item-object-custom depth-1 "><a href="https://www.kdjingpai.com/ai-learning/dissertation-search/" data-event="tb_anchor" data-anchor="#menu-7|3" data-catid="428" data-wpel-link="internal">论文检索</a></li><li class="menu-item menu-item-type-custom menu-item-object-custom depth-1 "><a href="https://www.kdjingpai.com/ai-learning/ai-content-detection/" data-event="tb_anchor" data-anchor="#menu-7|4" data-catid="429" data-wpel-link="internal">AI内容检测</a></li><li class="menu-item menu-item-type-custom menu-item-object-custom depth-1 "><a href="https://www.kdjingpai.com/ai-learning/course-tutoring/" data-event="tb_anchor" data-anchor="#menu-7|5" data-catid="439" data-wpel-link="internal">课程辅导</a></li><li class="menu-item menu-item-type-custom menu-item-object-custom depth-1 "><a href="https://www.kdjingpai.com/ai-learning/video-assisted/" data-event="tb_anchor" data-anchor="#menu-7|6" data-catid="451" data-wpel-link="internal">视频辅助学习</a></li><li class="menu-item menu-item-type-custom menu-item-object-custom depth-1 "><a href="https://www.kdjingpai.com/ai-learning/knowledge-notes/" data-event="tb_anchor" data-anchor="#menu-7|7" data-catid="456" data-wpel-link="internal">个人知识笔记</a></li><li class="menu-item menu-item-type-custom menu-item-object-custom depth-1 "><a href="https://www.kdjingpai.com/ai-learning/document-reading/" data-event="tb_anchor" data-anchor="#menu-7|8" data-catid="457" data-wpel-link="internal">文档辅助阅读</a></li><li class="menu-item menu-item-type-custom menu-item-object-custom depth-1 "><a href="https://www.kdjingpai.com/ai-learning/ai-translation/" data-event="tb_anchor" data-anchor="#menu-7|9" data-catid="463" data-wpel-link="internal">翻译/语言学习</a></li></ul></li><li class="menu-item menu-item-type-custom menu-item-object-custom depth-0 "><a href="https://www.kdjingpai.com/ai-productivity/" data-event="tb_anchor" data-anchor="#menu-8" data-catid="" data-wpel-link="internal">AI工作效率<span data-event="tb_toggle_menu" class="tbfa fa-right m-a m-a-0"></span></a><ul class="sub-menu s-m-0"><li class="menu-item menu-item-type-custom menu-item-object-custom depth-1 "><a href="https://www.kdjingpai.com/ai-productivity/product-explanation/" data-event="tb_anchor" data-anchor="#menu-8|0" data-catid="465" data-wpel-link="internal">产品讲解</a></li><li class="menu-item menu-item-type-custom menu-item-object-custom depth-1 "><a href="https://www.kdjingpai.com/ai-productivity/hr-job/" data-event="tb_anchor" data-anchor="#menu-8|1" data-catid="468" data-wpel-link="internal">人资/面试</a></li><li class="menu-item menu-item-type-custom menu-item-object-custom depth-1 "><a href="https://www.kdjingpai.com/ai-productivity/email-management/" data-event="tb_anchor" data-anchor="#menu-8|2" data-catid="469" data-wpel-link="internal">邮件管理</a></li><li class="menu-item menu-item-type-custom menu-item-object-custom depth-1 "><a href="https://www.kdjingpai.com/ai-productivity/information-collection/" data-event="tb_anchor" data-anchor="#menu-8|3" data-catid="471" data-wpel-link="internal">信息收纳/检索</a></li><li class="menu-item menu-item-type-custom menu-item-object-custom depth-1 "><a href="https://www.kdjingpai.com/ai-productivity/schedule-planning/" data-event="tb_anchor" data-anchor="#menu-8|4" data-catid="474" data-wpel-link="internal">任务/日程管理</a></li><li class="menu-item menu-item-type-custom menu-item-object-custom depth-1 "><a href="https://www.kdjingpai.com/ai-productivity/ai-programming/" data-event="tb_anchor" data-anchor="#menu-8|5" data-catid="493" data-wpel-link="internal">编程/开发</a></li><li class="menu-item menu-item-type-custom menu-item-object-custom depth-1 "><a href="https://www.kdjingpai.com/ai-productivity/personal-assistant/" data-event="tb_anchor" data-anchor="#menu-8|6" data-catid="495" data-wpel-link="internal">个人助理</a></li><li class="menu-item menu-item-type-custom menu-item-object-custom depth-1 "><a href="https://www.kdjingpai.com/ai-productivity/whiteboard/" data-event="tb_anchor" data-anchor="#menu-8|7" data-catid="447" data-wpel-link="internal">白板/信息图</a></li><li class="menu-item menu-item-type-custom menu-item-object-custom depth-1 "><a href="https://www.kdjingpai.com/ai-productivity/ai-ppt/" data-event="tb_anchor" data-anchor="#menu-8|8" data-catid="448" data-wpel-link="internal">AI制作PPT</a></li><li class="menu-item menu-item-type-custom menu-item-object-custom depth-1 "><a href="https://www.kdjingpai.com/ai-productivity/ai-data/" data-event="tb_anchor" data-anchor="#menu-8|9" data-catid="449" data-wpel-link="internal">AI数据分析</a></li><li class="menu-item menu-item-type-custom menu-item-object-custom depth-1 "><a href="https://www.kdjingpai.com/ai-productivity/meeting-minutes/" data-event="tb_anchor" data-anchor="#menu-8|10" data-catid="453" data-wpel-link="internal">会议记录</a></li></ul></li><li class="menu-item menu-item-type-custom menu-item-object-custom depth-0 "><a href="https://www.kdjingpai.com/ai-life/" data-event="tb_anchor" data-anchor="#menu-9" data-catid="" data-wpel-link="internal">AI生活娱乐<span data-event="tb_toggle_menu" class="tbfa fa-right m-a m-a-0"></span></a><ul class="sub-menu s-m-0"><li class="menu-item menu-item-type-custom menu-item-object-custom depth-1 "><a href="https://www.kdjingpai.com/ai-life/travel/" data-event="tb_anchor" data-anchor="#menu-9|0" data-catid="473" data-wpel-link="internal">旅行</a></li><li class="menu-item menu-item-type-custom menu-item-object-custom depth-1 "><a href="https://www.kdjingpai.com/ai-life/role-playing/" data-event="tb_anchor" data-anchor="#menu-9|1" data-catid="477" data-wpel-link="internal">角色扮演</a></li><li class="menu-item menu-item-type-custom menu-item-object-custom depth-1 "><a href="https://www.kdjingpai.com/ai-life/computer-tools/" data-event="tb_anchor" data-anchor="#menu-9|2" data-catid="482" data-wpel-link="internal">电脑工具</a></li><li class="menu-item menu-item-type-custom menu-item-object-custom depth-1 "><a href="https://www.kdjingpai.com/ai-life/ai-face-swapping/" data-event="tb_anchor" data-anchor="#menu-9|3" data-catid="444" data-wpel-link="internal">AI换脸</a></li><li class="menu-item menu-item-type-custom menu-item-object-custom depth-1 "><a href="https://www.kdjingpai.com/ai-life/read/" data-event="tb_anchor" data-anchor="#menu-9|4" data-catid="458" data-wpel-link="internal">阅读</a></li><li class="menu-item menu-item-type-custom menu-item-object-custom depth-1 "><a href="https://www.kdjingpai.com/ai-life/psychological-counseling/" data-event="tb_anchor" data-anchor="#menu-9|5" data-catid="470" data-wpel-link="internal">心理辅导</a></li><li class="menu-item menu-item-type-custom menu-item-object-custom depth-1 "><a href="https://www.kdjingpai.com/ai-life/health/" data-event="tb_anchor" data-anchor="#menu-9|6" data-catid="472" data-wpel-link="internal">家庭/健康</a></li></ul></li><li class="menu-item menu-item-type-custom menu-item-object-custom depth-0 "><a href="https://www.kdjingpai.com/ai-business/" data-event="tb_anchor" data-anchor="#menu-10" data-catid="" data-wpel-link="internal">AI商业应用<span data-event="tb_toggle_menu" class="tbfa fa-right m-a m-a-0"></span></a><ul class="sub-menu s-m-0"><li class="menu-item menu-item-type-custom menu-item-object-custom depth-1 "><a href="https://www.kdjingpai.com/ai-business/ai-human/" data-event="tb_anchor" data-anchor="#menu-10|0" data-catid="435" data-wpel-link="internal">AI数字人</a></li><li class="menu-item menu-item-type-custom menu-item-object-custom depth-1 "><a href="https://www.kdjingpai.com/ai-business/commercial-shooting/" data-event="tb_anchor" data-anchor="#menu-10|1" data-catid="436" data-wpel-link="internal">AI商拍</a></li><li class="menu-item menu-item-type-custom menu-item-object-custom depth-1 "><a href="https://www.kdjingpai.com/ai-business/ai-architectural/" data-event="tb_anchor" data-anchor="#menu-10|2" data-catid="437" data-wpel-link="internal">AI建筑设计</a></li><li class="menu-item menu-item-type-custom menu-item-object-custom depth-1 "><a href="https://www.kdjingpai.com/ai-business/ai-comic/" data-event="tb_anchor" data-anchor="#menu-10|3" data-catid="438" data-wpel-link="internal">漫画创作</a></li><li class="menu-item menu-item-type-custom menu-item-object-custom depth-1 "><a href="https://www.kdjingpai.com/ai-business/ai-icon/" data-event="tb_anchor" data-anchor="#menu-10|4" data-catid="446" data-wpel-link="internal">AI图标/Logo</a></li><li class="menu-item menu-item-type-custom menu-item-object-custom depth-1 "><a href="https://www.kdjingpai.com/ai-business/audio-podcast/" data-event="tb_anchor" data-anchor="#menu-10|5" data-catid="454" data-wpel-link="internal">音频播客</a></li><li class="menu-item menu-item-type-custom menu-item-object-custom depth-1 "><a href="https://www.kdjingpai.com/ai-business/contract-documents/" data-event="tb_anchor" data-anchor="#menu-10|6" data-catid="460" data-wpel-link="internal">法律/标准文书</a></li><li class="menu-item menu-item-type-custom menu-item-object-custom depth-1 "><a href="https://www.kdjingpai.com/ai-business/video-localization/" data-event="tb_anchor" data-anchor="#menu-10|7" data-catid="466" data-wpel-link="internal">视频本地化</a></li><li class="menu-item menu-item-type-custom menu-item-object-custom depth-1 "><a href="https://www.kdjingpai.com/ai-business/finance-tax/" data-event="tb_anchor" data-anchor="#menu-10|8" data-catid="481" data-wpel-link="internal">金融/财税</a></li><li class="menu-item menu-item-type-custom menu-item-object-custom depth-1 "><a href="https://www.kdjingpai.com/ai-business/generative-music/" data-event="tb_anchor" data-anchor="#menu-10|9" data-catid="504" data-wpel-link="internal">AI音乐</a></li></ul></li><li class="menu-item menu-item-type-custom menu-item-object-custom depth-0 "><a href="https://www.kdjingpai.com/ai-marketing/" data-event="tb_anchor" data-anchor="#menu-11" data-catid="" data-wpel-link="internal">AI营销<span data-event="tb_toggle_menu" class="tbfa fa-right m-a m-a-0"></span></a><ul class="sub-menu s-m-0"><li class="menu-item menu-item-type-custom menu-item-object-custom depth-1 "><a href="https://www.kdjingpai.com/ai-marketing/marketing-automation/" data-event="tb_anchor" data-anchor="#menu-11|0" data-catid="487" data-wpel-link="internal">营销自动化</a></li><li class="menu-item menu-item-type-custom menu-item-object-custom depth-1 "><a href="https://www.kdjingpai.com/ai-marketing/delivery-optimization/" data-event="tb_anchor" data-anchor="#menu-11|1" data-catid="489" data-wpel-link="internal">投放优化</a></li><li class="menu-item menu-item-type-custom menu-item-object-custom depth-1 "><a href="https://www.kdjingpai.com/ai-marketing/customer-acquisition/" data-event="tb_anchor" data-anchor="#menu-11|2" data-catid="491" data-wpel-link="internal">获客/CRM</a></li><li class="menu-item menu-item-type-custom menu-item-object-custom depth-1 "><a href="https://www.kdjingpai.com/ai-marketing/research/" data-event="tb_anchor" data-anchor="#menu-11|3" data-catid="461" data-wpel-link="internal">调研/分析</a></li><li class="menu-item menu-item-type-custom menu-item-object-custom depth-1 "><a href="https://www.kdjingpai.com/ai-marketing/promotional-materials/" data-event="tb_anchor" data-anchor="#menu-11|4" data-catid="467" data-wpel-link="internal">推广物料</a></li><li class="menu-item menu-item-type-custom menu-item-object-custom depth-1 "><a href="https://www.kdjingpai.com/ai-marketing/customer-service/" data-event="tb_anchor" data-anchor="#menu-11|5" data-catid="485" data-wpel-link="internal">AI客服</a></li><li class="menu-item menu-item-type-custom menu-item-object-custom depth-1 "><a href="https://www.kdjingpai.com/ai-marketing/social-media/" data-event="tb_anchor" data-anchor="#menu-11|6" data-catid="486" data-wpel-link="internal">社交媒体</a></li></ul></li><li class="menu-item menu-item-type-custom menu-item-object-custom depth-0 "><a href="https://www.kdjingpai.com/ai-professional/" data-event="tb_anchor" data-anchor="#menu-12" data-catid="" data-wpel-link="internal">AI专业应用<span data-event="tb_toggle_menu" class="tbfa fa-right m-a m-a-0"></span></a><ul class="sub-menu s-m-0"><li class="menu-item menu-item-type-custom menu-item-object-custom depth-1 "><a href="https://www.kdjingpai.com/ai-professional/agent-development/" data-event="tb_anchor" data-anchor="#menu-12|0" data-catid="476" data-wpel-link="internal">智能体开发</a></li><li class="menu-item menu-item-type-custom menu-item-object-custom depth-1 "><a href="https://www.kdjingpai.com/ai-professional/memory-system/" data-event="tb_anchor" data-anchor="#menu-12|1" data-catid="478" data-wpel-link="internal">记忆缓存系统</a></li><li class="menu-item menu-item-type-custom menu-item-object-custom depth-1 "><a href="https://www.kdjingpai.com/ai-professional/fine-tuning/" data-event="tb_anchor" data-anchor="#menu-12|2" data-catid="483" data-wpel-link="internal">模型微调</a></li><li class="menu-item menu-item-type-custom menu-item-object-custom depth-1 "><a href="https://www.kdjingpai.com/ai-professional/workflow/" data-event="tb_anchor" data-anchor="#menu-12|3" data-catid="488" data-wpel-link="internal">工作流</a></li><li class="menu-item menu-item-type-custom menu-item-object-custom depth-1 "><a href="https://www.kdjingpai.com/ai-professional/desktop-automation/" data-event="tb_anchor" data-anchor="#menu-12|4" data-catid="494" data-wpel-link="internal">桌面自动化</a></li><li class="menu-item menu-item-type-custom menu-item-object-custom depth-1 "><a href="https://www.kdjingpai.com/ai-professional/ai-basic-services/" data-event="tb_anchor" data-anchor="#menu-12|5" data-catid="496" data-wpel-link="internal">AI基础服务</a></li><li class="menu-item menu-item-type-custom menu-item-object-custom depth-1 "><a href="https://www.kdjingpai.com/ai-professional/deployment-model/" data-event="tb_anchor" data-anchor="#menu-12|6" data-catid="497" data-wpel-link="internal">部署模型</a></li><li class="menu-item menu-item-type-custom menu-item-object-custom depth-1 "><a href="https://www.kdjingpai.com/ai-professional/knowledge-base/" data-event="tb_anchor" data-anchor="#menu-12|7" data-catid="455" data-wpel-link="internal">知识库应用</a></li><li class="menu-item menu-item-type-custom menu-item-object-custom depth-1 "><a href="https://www.kdjingpai.com/ai-professional/no-code/" data-event="tb_anchor" data-anchor="#menu-12|8" data-catid="498" data-wpel-link="internal">低代码开发</a></li><li class="menu-item menu-item-type-custom menu-item-object-custom depth-1 "><a href="https://www.kdjingpai.com/ai-professional/rag-project/" data-event="tb_anchor" data-anchor="#menu-12|9" data-catid="459" data-wpel-link="internal">RAG</a></li><li class="menu-item menu-item-type-custom menu-item-object-custom depth-1 "><a href="https://www.kdjingpai.com/ai-professional/document-extraction/" data-event="tb_anchor" data-anchor="#menu-12|10" data-catid="499" data-wpel-link="internal">数据提取</a></li><li class="menu-item menu-item-type-custom menu-item-object-custom depth-1 "><a href="https://www.kdjingpai.com/ai-professional/object-recognition/" data-event="tb_anchor" data-anchor="#menu-12|11" data-catid="464" data-wpel-link="internal">视觉目标检测</a></li><li class="menu-item menu-item-type-custom menu-item-object-custom depth-1 "><a href="https://www.kdjingpai.com/ai-professional/text-recognition/" data-event="tb_anchor" data-anchor="#menu-12|12" data-catid="502" data-wpel-link="internal">OCR</a></li><li class="menu-item menu-item-type-custom menu-item-object-custom depth-1 "><a href="https://www.kdjingpai.com/ai-professional/agent-application/" data-event="tb_anchor" data-anchor="#menu-12|13" data-catid="475" data-wpel-link="internal">智能体应用</a></li></ul></li><li class="menu-item menu-item-type-custom menu-item-object-custom depth-0 "><a href="https://www.kdjingpai.com/models/" data-event="tb_anchor" data-anchor="#menu-13" data-catid="" data-wpel-link="internal">基础模型<span data-event="tb_toggle_menu" class="tbfa fa-right m-a m-a-0"></span></a><ul class="sub-menu s-m-0"><li class="menu-item menu-item-type-custom menu-item-object-custom depth-1 "><a href="https://www.kdjingpai.com/models/text-model/" data-event="tb_anchor" data-anchor="#menu-13|0" data-catid="397" data-wpel-link="internal">文本模型</a></li><li class="menu-item menu-item-type-custom menu-item-object-custom depth-1 "><a href="https://www.kdjingpai.com/models/image-generation-model/" data-event="tb_anchor" data-anchor="#menu-13|1" data-catid="398" data-wpel-link="internal">图像生成模型</a></li><li class="menu-item menu-item-type-custom menu-item-object-custom depth-1 "><a href="https://www.kdjingpai.com/models/video-generation-model/" data-event="tb_anchor" data-anchor="#menu-13|2" data-catid="399" data-wpel-link="internal">视频生成模型</a></li><li class="menu-item menu-item-type-custom menu-item-object-custom depth-1 "><a href="https://www.kdjingpai.com/models/speech-model/" data-event="tb_anchor" data-anchor="#menu-13|3" data-catid="400" data-wpel-link="internal">语音模型</a></li><li class="menu-item menu-item-type-custom menu-item-object-custom depth-1 "><a href="https://www.kdjingpai.com/models/visual-recognition-model/" data-event="tb_anchor" data-anchor="#menu-13|4" data-catid="401" data-wpel-link="internal">视觉识别模型</a></li><li class="menu-item menu-item-type-custom menu-item-object-custom depth-1 "><a href="https://www.kdjingpai.com/models/multimodal-models/" data-event="tb_anchor" data-anchor="#menu-13|5" data-catid="402" data-wpel-link="internal">多模态模型</a></li><li class="menu-item menu-item-type-custom menu-item-object-custom depth-1 "><a href="https://www.kdjingpai.com/models/dedicated-model/" data-event="tb_anchor" data-anchor="#menu-13|6" data-catid="403" data-wpel-link="internal">专用模型</a></li></ul></li><li id="menu-item-33317" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-33317 depth-0"><a href="https://www.kdjingpai.com/mianfeidamoxingapi/" data-wpel-link="internal">免费API</a></li>
+<li id="menu-item-33320" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-33320 depth-0"><a href="https://www.kdjingpai.com/aifuyexiangmu/" data-wpel-link="internal">副业项目</a></li>
+</ul><div class="tb-h-bottom"></div></header><div class="-mnav-mask" data-event="toggle_m_nav"><span class="tbfa fa-close"></span></div>    <div class="tb-container">
+        <div class="tb-topper"><span class="-menu-icon tbfa fa-menu" data-event="toggle_m_nav"></span><div class="logo"><a href="https://www.kdjingpai.com" data-wpel-link="internal"><img src="https://www.kdjingpai.com/wp-content/uploads/2025/05/541866eb44ac15c.png" alt="AI生产力工具" /><img class="-light" src="https://www.kdjingpai.com/wp-content/uploads/2025/05/94b85eeb24b781f.png" alt="AI生产力工具" /></a></div><div class="-slogan">海外访问：www.kdjingpai.com</div><a class="tb-sign-in -in tb-btn -p" rel="nofollow" href="javascript:;" data-event="show_in" data-wpel-link="internal">登录</a><a class="tb-sign-in -up tb-btn -w" rel="nofollow" href="javascript:;" data-event="show_up" data-wpel-link="internal">注册</a><div class="top-search tbfa fa-search" data-event="show_search"></div><ul class="tb-menu3"><li id="menu-item-31014" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-31014 depth-0"><a href="https://www.kdjingpai.com/news/" data-wpel-link="internal">AI新闻</a></li>
+<li id="menu-item-31012" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-31012 depth-0"><a href="https://www.kdjingpai.com/tool/" data-wpel-link="internal">AI工具库</a></li>
+<li id="menu-item-31015" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-31015 depth-0"><a href="https://www.kdjingpai.com/shicao/" data-wpel-link="internal">AI实操教程</a></li>
+<li id="menu-item-31013" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-31013 depth-0"><a href="https://www.kdjingpai.com/prompts/" data-wpel-link="internal">AI实用指令</a></li>
+<li id="menu-item-31016" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-31016 depth-0"><a href="https://www.kdjingpai.com/knowledge/" data-wpel-link="internal">AI知识</a></li>
+<li id="menu-item-31010" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-31010 depth-0"><a href="https://www.kdjingpai.com/collect/" data-wpel-link="internal">我的收藏</a></li>
+<li id="menu-item-31009" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-31009 depth-0"><a href="https://www.kdjingpai.com/contribute/" data-wpel-link="internal">我要投稿</a></li>
+</ul><div class="collect-tip"  style="color:#000000">Ctrl + D 收藏本站</div></div><div class="tb-main-wraper -prop with-sidebar">
+    <div class="tb-main">
+        <div class="content tb-b-card m-no-rds"><div class="art-header post-header"><div class="tb-crumbs">当前位置：<a href="https://www.kdjingpai.com" data-wpel-link="internal">首页</a><span class="arrow">  »  </span><a href="https://www.kdjingpai.com/shicao/" data-wpel-link="internal">AI实操教程</a></div><h1 class="art-title">2025年8大AI Agent框架深度评测：从LangChain到CrewAI，开发者选型终极指南</h1><div class="-metas"><span class="-meta -date tbfa fa-clock"> 2025-07-29</span><div class="tb-cats tbfa fa-group"> <a href="https://www.kdjingpai.com/shicao/" data-wpel-link="internal">AI实操教程</a></div><span class="-meta -views tbfa fa-views"> 4.2 K</span></div></div><div class="art-content with-ft"><p>AI Agent（智能体）正推动大型语言模型（LLM）从“对话”走向“行动”。一个真正的 Agent 不仅能理解指令，还能自主规划、调用工具、并与外部环境交互，以完成复杂的任务。这背后离不开强大的开源框架支持。</p>
+<p>当前，AI Agent 框架领域已经涌现出多个优秀项目，它们在设计哲学、任务编排、工具集成乃至多 Agent 协作能力上各有千秋。本文将对八个主流框架进行深入的对比分析，帮助开发者和团队找到最适合自身需求的解决方案。</p>
+<h3>1. LangChain：LLM 应用开发的事实标准</h3>
+<h4>简介</h4>
+<p><a href="https://www.kdjingpai.com/langchain-vs-langgraph/" data-wpel-link="internal">LangChain</a> 是 LLM 应用开发领域的基础设施，它并非专为 Agent 设计，但其全面的组件生态使其成为构建 Agent 的起点。</p>
+<p><img decoding="async" src="https://www.kdjingpai.com/wp-content/uploads/2025/07/d37f631e6d05759.png" alt="" /></p>
+<h4>核心特点</h4>
+<ul>
+<li><strong>全面的组件</strong>: 提供了从数据加载（Document Loaders）、向量化（Vectorstores）、记忆（Memory）到工具（Tools）的完整模块。</li>
+<li><strong>Agent 策略</strong>: 支持多种 Agent 运行策略，如 <code><a href="https://www.kdjingpai.com/react/" data-wpel-link="internal">ReAct</a></code>、<code>Plan-and-Execute</code> 和 <code>Conversational</code>。</li>
+<li><strong>LCEL (LangChain Expression Language)</strong>: 这是 LangChain 最新的核心特性，通过管道符 <code>|</code> 将不同的组件流畅地组合起来，代码更简洁，也更容易实现并行执行和流式输出。</li>
+</ul>
+<h4>技术架构</h4>
+<p><code>LangChain</code> 的架构围绕 <code>Chain</code> 的概念构建，通过 LCEL 将 <code>PromptTemplate</code>、<code>LLM</code> 和 <code>Output Parser</code> 等组件连接成一个可执行的任务流。其 Agent 模块通过 <code>AgentExecutor</code> 来管理 Agent 的思考和行动循环。同时，它集成了 <code>LangSmith</code> 用于调试和可观测性，这在复杂 Agent 的开发中至关重要。</p>
+<h4>适合场景</h4>
+<ul>
+<li>需要高度定制化的通用 Agent 构建。</li>
+<li>构建围绕 RAG（检索增强生成）、对话系统和代码分析的应用。</li>
+<li>作为学习和理解 Agent 工作原理的基础框架。</li>
+</ul>
+<h3>2. CrewAI：面向协作的“公司式” Agent 团队</h3>
+<h4>简介</h4>
+<p><a href="https://www.kdjingpai.com/crewai/" data-wpel-link="internal"><code>CrewAI</code></a> 的核心思想是“团队协作”。它将 Agent 抽象为具有特定角色（Role）和目标（Goal）的团队成员，通过流程（Process）来协同完成复杂任务。</p>
+<p><img decoding="async" src="https://www.kdjingpai.com/wp-content/uploads/2025/07/432b19dc8366453.png" alt="" /></p>
+<h4>核心特点</h4>
+<ul>
+<li><strong>角色化分工</strong>: 每个 Agent 都有明确的角色、职责和可用工具，结构清晰。</li>
+<li><strong>内置协作流程</strong>: 框架内置了任务调度和协作机制，支持顺序或层级任务执行。</li>
+<li><strong>灵活的配置</strong>: 每个 Agent 可以独立配置使用不同的 LLM，允许为不同任务选择最优模型。</li>
+</ul>
+<h4>技术架构</h4>
+<p>其架构由三个核心部分组成：<code>Agent</code>（定义执行者）、<code>Task</code>（定义任务）和 <code>Crew</code>（组织 Agent 和 Task 并启动执行）。<code><a href="https://www.kdjingpai.com/crewai/" data-wpel-link="internal">CrewAI</a></code> 可以无缝集成 <code>LangChain</code> 的工具生态，使其在具备清晰结构的同时，不失强大的功能扩展性。</p>
+<h4>优势</h4>
+<p><code>CrewAI</code> 的模型非常贴近真实世界的工作流，例如市场研究报告的撰写流程可以被拆分为：研究员 Agent 负责搜集资料，分析师 Agent 负责整合数据，作家 Agent 负责撰写报告。这种模式使任务分解和管理变得异常简单。</p>
+<h4>使用场景</h4>
+<ul>
+<li>需要清晰分工的多步骤任务，如内容创作、市场分析、代码审查。</li>
+<li>企业内部的办公自动化流程。</li>
+</ul>
+<h3>3. AutoGPT：自主智能体的早期探索者</h3>
+<h4>简介</h4>
+<p><code><a href="https://www.kdjingpai.com/autogpt/" data-wpel-link="internal">AutoGPT</a></code> 是最早引爆“自主智能体”概念的项目之一。它的目标是实现一个全自动的闭环系统：用户只需给定一个最终目标，<code><a href="https://www.kdjingpai.com/autogpt/" data-wpel-link="internal">AutoGPT</a></code> 就能自主拆解任务、执行并进行自我评估和修正。</p>
+<p><img decoding="async" src="https://www.kdjingpai.com/wp-content/uploads/2025/07/a3e05f736c04479.png" alt="" /></p>
+<h4>核心特点</h4>
+<ul>
+<li><strong>全自主循环</strong>: 遵循“思考（Think）-&gt; 行动（Act）-&gt; 观察（Observe）”的循环，无需人工干预。</li>
+<li><strong>长期记忆</strong>: 利用向量数据库实现信息的长期存储和检索。</li>
+<li><strong>动态工具调用</strong>: 能够自主决定调用何种工具（如网页搜索、文件读写）来达成目标。</li>
+</ul>
+<h4>优劣势</h4>
+<p><code>AutoGPT</code> 的开创性意义巨大，它向世界展示了 LLM Agent 的潜力。然而，它在实际应用中也暴露了明显的问题：任务拆解容易出错、执行过程可能陷入死循环、token 和计算资源消耗巨大。因此，它更多被视为一个实验性项目，而非生产力工具。</p>
+<h4>使用场景</h4>
+<ul>
+<li>AI Agent 概念验证和学术研究。</li>
+<li>自动化数据采集和初步研究等非关键性任务。</li>
+</ul>
+<h3>4. AgentVerse：专为多智能体社交与协作设计的平台</h3>
+<h4>简介</h4>
+<p><a href="https://www.kdjingpai.com/agentverse/" data-wpel-link="internal"><code>AgentVerse</code></a> 是一个由清华大学研究者推出的实验性框架，专注于多 Agent 之间的复杂动态交互，如辩论、协商和合作。</p>
+<p><img decoding="async" src="https://www.kdjingpai.com/wp-content/uploads/2025/07/1ee05a0a8cda7ba.png" alt="" /></p>
+<h4>核心特点</h4>
+<ul>
+<li><strong>多智能体环境</strong>: 支持多个 Agent 在一个共享环境中异步并行执行。</li>
+<li><strong>丰富的通信协议</strong>: 内置了消息广播、点对点通信等机制，支持 Agent 间的“社交”行为。</li>
+<li><strong>灵活的部署</strong>: 可以在本地或分布式环境中部署，方便进行大规模模拟实验。</li>
+</ul>
+<h4>技术架构</h4>
+<p><code><a href="https://www.kdjingpai.com/agentverse/" data-wpel-link="internal">AgentVerse</a></code> 为每个 Agent 提供了一个独立的状态机和工具集，并由一个主控 Agent 负责协调。它支持多种交互策略，如 <code>ReAct</code> 和对话驱动模式，使其成为研究多智能体社会行为的理想平台。</p>
+<h4>使用场景</h4>
+<ul>
+<li>模拟社会性或经济性博弈。</li>
+<li>构建复杂的对话式 Agent 团队，如模拟客服中心或公司决策会议。</li>
+<li>AI 教学与研究。</li>
+</ul>
+<h3>5. SuperAGI：为企业打造的可视化 Agent 平台</h3>
+<h4>简介</h4>
+<p>如果说 <code>LangChain</code> 是面向开发者的“命令行”，那么 <a href="https://www.kdjingpai.com/superagi/" data-wpel-link="internal"><code>SuperAGI</code></a> 则更像是为企业打造的“图形界面”。它提供了一个可视化的 Agent 管理平台，目标是降低 Agent 应用的部署和管理门槛。</p>
+<p><img decoding="async" src="https://www.kdjingpai.com/wp-content/uploads/2025/07/f34ea7272c1b3e8.png" alt="" /></p>
+<h4>核心特点</h4>
+<ul>
+<li><strong>Web UI 管理</strong>: 提供 Agent 仪表盘，可以方便地创建、配置、监控 Agent 的运行状态。</li>
+<li><strong>工具市场（Marketplace）</strong>: 拥有一个活跃的工具插件生态，可以轻松集成 Google 搜索、浏览器、SQL 等常用工具。</li>
+<li><strong>任务队列与日志</strong>: 内置任务管理系统，并提供详细的执行日志追踪，便于排错和审计。</li>
+</ul>
+<h4>优势</h4>
+<p><code><a href="https://www.kdjingpai.com/superagi/" data-wpel-link="internal">SuperAGI</a></code> 的最大优势在于其易用性。非技术人员也可以通过其 UI 界面来管理和运行 Agent，这使得它非常适合需要快速落地 Agent 应用的企业环境。</p>
+<h4>应用</h4>
+<ul>
+<li>企业内部文档的自动化处理与摘要。</li>
+<li>销售或市场数据的周期性分析。</li>
+<li>构建可管理的智能客服助手。</li>
+</ul>
+<h3>6. MetaGPT：模拟软件开发流程的 SOP 专家</h3>
+<h4>简介</h4>
+<p><a href="https://www.kdjingpai.com/metagpt/" data-wpel-link="internal"><code>MetaGPT</code></a> 是一个目标明确的 Agent 框架，它将软件开发的标准作业程序（SOPs）编码到系统中，通过模拟不同角色（如产品经理、架构师、工程师、测试）的协作，自动化整个软件开发流程。</p>
+<p><img decoding="async" src="https://www.kdjingpai.com/wp-content/uploads/2025/07/b4c718acec9d01a.png" alt="" /></p>
+<h4>核心特点</h4>
+<ul>
+<li><strong>SOP 驱动</strong>: 区别于其他框架的通用任务分解，<code><a href="https://www.kdjingpai.com/metagpt/" data-wpel-link="internal">MetaGPT</a></code> 的核心是预定义的 SOPs。它知道开发一个软件需要先做需求分析，然后是架构设计，再到编码和测试。</li>
+<li><strong>多角色协作</strong>: 内置了产品经理（PM）、工程师（RD）、测试（QA）等角色，每个角色都有明确的输入和输出。</li>
+<li><strong>产出标准化</strong>: 能够自动生成需求文档、系统设计图、代码和测试用例等结构化产物。</li>
+</ul>
+<h4>技术架构</h4>
+<p><code>MetaGPT</code> 基于任务队列和流程图来推进项目。每个角色 Agent 完成自己的任务后，会将产出传递给下一个角色，形成一条高效的流水线。这种模式保证了最终产出的质量和一致性。</p>
+<h4>使用场景</h4>
+<ul>
+<li>快速生成项目原型或最小可行产品（MVP）。</li>
+<li>自动化 API 接口和相关文档的开发。</li>
+<li>作为软件工程教学的辅助工具。</li>
+</ul>
+<h3>7. OpenAgent：注重可解释性的模块化 Agent 系统</h3>
+<h4>简介</h4>
+<p><a href="https://www.kdjingpai.com/openagents/" data-wpel-link="internal"><code>OpenAgent</code></a> 强调模块化和任务执行的可解释性，其设计目标是让 Agent 的决策过程更透明、更可控，尤其适用于对合规和审计有较高要求的企业环境。</p>
+<p><img decoding="async" src="https://www.kdjingpai.com/wp-content/uploads/2025/07/beb70b60f60f1e6.png" alt="" /></p>
+<h4>核心特点</h4>
+<ul>
+<li><strong>模块解耦</strong>: 将 Agent 的核心组件如规划器（Planner）、工具（Tool）、反馈（Feedback）等进行分离式设计，便于单独升级和审计。</li>
+<li><strong>统一任务框架</strong>: 提供一个统一的 <code>AgentExecutor</code> 来调度所有任务，保证了执行逻辑的一致性。</li>
+<li><strong>私有化友好</strong>: 支持本地大模型部署，易于在私有化环境中使用。</li>
+</ul>
+<h4>应用场景</h4>
+<ul>
+<li>金融、法律等对决策过程可解释性要求高的行业。</li>
+<li>需要构建可控、合规的私有化 Agent 系统的企业。</li>
+<li>企业内部复杂数据工作流的管理。</li>
+</ul>
+<h3>8. CAMEL：用于探索 LLM 心智的对话式双 Agent 系统</h3>
+<h4>简介</h4>
+<p><code><a href="https://www.kdjingpai.com/camel-ai/" data-wpel-link="internal">CAMEL</a></code> (Communicative Agents for Mind Exploration of LLMs) 是一个由斯坦福大学团队提出的研究框架，其核心是一个由两个 Agent 组成的对话系统。通过让它们扮演不同角色并围绕一个任务进行对话，来探索 LLM 在推理、协商和偏见等方面的深层能力。</p>
+<p><img decoding="async" src="https://www.kdjingpai.com/wp-content/uploads/2025/07/15b61c8c8e56ef5.png" alt="" /></p>
+<h4>技术亮点</h4>
+<ul>
+<li><strong>角色扮演对话</strong>: 系统由一个“AI 用户” Agent 和一个“AI 助手” Agent 组成，前者提出任务，后者执行，并在过程中不断交流。</li>
+<li><strong>任务剧本驱动</strong>: 通过预设的剧本（scenario）来设定角色和目标，引导 Agent 进行深度互动。</li>
+<li><strong>探索模型能力</strong>: <code><a href="https://www.kdjingpai.com/camel-ai/" data-wpel-link="internal">CAMEL</a></code> 的主要目的不是完成任务，而是通过观察 Agent 间的对话来研究 LLM 的心智模型。</li>
+</ul>
+<h4>适合谁用？</h4>
+<ul>
+<li>AI 研究人员和对 LLM 内部工作机制感兴趣的学者。</li>
+<li>需要进行多 Agent 协商或博弈建模的研究者。</li>
+</ul>
+<h3>如何选择？</h3>
+<table>
+<thead>
+<tr>
+<th align="left">框架</th>
+<th align="left">多 Agent 协作</th>
+<th align="left">工具集成能力</th>
+<th align="left">可视化支持</th>
+<th align="left">企业适配度</th>
+<th align="left">核心应用方向</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><strong>LangChain</strong></td>
+<td align="left">基础支持</td>
+<td align="left">非常强大</td>
+<td align="left">无</td>
+<td align="left">高</td>
+<td align="left">通用开发与原型</td>
+</tr>
+<tr>
+<td align="left"><strong>CrewAI</strong></td>
+<td align="left">内置支持</td>
+<td align="left">强大</td>
+<td align="left">无</td>
+<td align="left">高</td>
+<td align="left">结构化团队协作</td>
+</tr>
+<tr>
+<td align="left"><strong>AutoGPT</strong></td>
+<td align="left">不支持</td>
+<td align="left">基础支持</td>
+<td align="left">无</td>
+<td align="left">低</td>
+<td align="left">概念验证与实验</td>
+</tr>
+<tr>
+<td align="left"><strong>AgentVerse</strong></td>
+<td align="left">核心特性</td>
+<td align="left">部分支持</td>
+<td align="left">部分支持</td>
+<td align="left">中</td>
+<td align="left">多智能体社交仿真</td>
+</tr>
+<tr>
+<td align="left"><strong>SuperAGI</strong></td>
+<td align="left">内置支持</td>
+<td align="left">强大</td>
+<td align="left">内置支持</td>
+<td align="left">非常高</td>
+<td align="left">企业级可视化工作流</td>
+</tr>
+<tr>
+<td align="left"><strong>MetaGPT</strong></td>
+<td align="left">核心特性</td>
+<td align="left">强大</td>
+<td align="left">内置支持</td>
+<td align="left">中</td>
+<td align="left">自动化软件开发</td>
+</tr>
+<tr>
+<td align="left"><strong>OpenAgent</strong></td>
+<td align="left">内置支持</td>
+<td align="left">强大</td>
+<td align="left">无</td>
+<td align="left">高</td>
+<td align="left">可解释的私有化部署</td>
+</tr>
+<tr>
+<td align="left"><strong>CAMEL</strong></td>
+<td align="left">核心特性</td>
+<td align="left">不支持</td>
+<td align="left">无</td>
+<td align="left">低</td>
+<td align="left">AI 心智模型研究</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>新手入门与通用开发</strong>: 从 <code>LangChain</code> 开始，它提供了最全面的组件和文档。</li>
+<li><strong>结构化多步任务</strong>: <code>CrewAI</code> 是最佳选择，其角色化分工模型非常清晰。</li>
+<li><strong>企业快速部署</strong>: <code>SuperAGI</code> 的可视化界面和工具市场能显著加速落地。</li>
+<li><strong>自动化软件开发</strong>: <code>MetaGPT</code> 在这一垂直领域无人能及。</li>
+<li><strong>学术研究</strong>: <code>AgentVerse</code> 和 <code>CAMEL</code> 提供了针对多智能体交互和 LLM 能力探索的专门工具。</li>
+</ul>
+<div class="tb-copyright -rds art">未经允许不得转载：<a href="https://www.kdjingpai.com" data-wpel-link="internal">AI生产力工具</a> » <a href="https://www.kdjingpai.com/2025nian8daai-agentai/" data-wpel-link="internal">2025年8大AI Agent框架深度评测：从LangChain到CrewAI，开发者选型终极指南</a></div></div><div class="art-footer "><div class="art-tool"><span class="-meta tb-like" data-id="34349" data-event="like_add"><i class="tbfa">&#xe682;</i><i class="tbfa">&#xe698;</i><span class="count">0</span><i class="status">已赞</i></span><div class="social-share" data-event="show_share"><span class="-meta tbfa fa-share"> 分享</span></div></div></div></div><div class="post-nav tb-b-card m-no-rds"><div class="-item prev"><a target="_blank" href="https://www.kdjingpai.com/aeneas/" rel="prev" data-wpel-link="internal"><i class="tbfa fa-left"></i><span class="-title">Aeneas：AI 赋予历史学家解读古代铭文的新方法</span></a></div><div class="-item next"><a target="_blank" href="https://www.kdjingpai.com/chatgpt-dexuexi/" rel="next" data-wpel-link="internal"><span class="-title">ChatGPT 的“学习模式”系统提示词</span><i class="tbfa fa-right"></i></a></div></div><div class="tb-relevant"><div class="tb-card-title "><h3>相关推荐</h3><div class="-title-tabs"></div></div><ul class="post-list -rds tb-row"><li class="post-news -rds" data-id="62435"><a class="info-wraper" target="_blank" href="https://www.kdjingpai.com/google-antigravity-ai-2/" data-wpel-link="internal"><div class="tb-thumb -rds"><img class="-rds" alt="Google Antigravity 账号大清洗：OAuth 滥用引发的大规模封号潮与账号恢复方法"src="https://www.kdjingpai.com/wp-content/themes/nab/assets/img/default-thumb.jpg" data-src="https://www.kdjingpai.com/wp-content/themes/nab/assets/img/default-thumb.jpg"></div><div class="p-t-w">Google Antigravity 账号大清洗：OAuth 滥用引发的大规模封号潮与账号恢复方法</div><p class="tb-excerpt">对于热衷于探索 Google 新一代 AI 开发工具的开发者而言，本周无疑经历了一场“重力失衡”的恐慌。 Google 旗下的 AI 优先开发环境（IDE）Google Antigravity 自发布以来，凭借其对 Gemini 3.1 和...</p></a></li><li class="post-news -rds" data-id="60835"><a class="info-wraper" target="_blank" href="https://www.kdjingpai.com/lingchengbenbushuzuiba/" data-wpel-link="internal"><div class="tb-thumb -rds"><img class="-rds" alt="零成本部署最强开源Agent：在GitHub Codespaces中构建OpenClaw与飞书私有智囊团"src="https://www.kdjingpai.com/wp-content/themes/nab/assets/img/default-thumb.jpg" data-src="https://www.kdjingpai.com/wp-content/uploads/2026/02/440703c8cc758cc.png"></div><div class="p-t-w">零成本部署最强开源Agent：在GitHub Codespaces中构建OpenClaw与飞书私有智囊团</div><p class="tb-excerpt">OpenClaw（原名Moltbot/ClawdBot）近期在开发者社区引发了广泛关注。作为一款主打“Local-First”（本地优先）的开源Agent框架，它以卓越的自主执行能力和插件扩展性，成为连接大模型与现实业务流的强力胶水。 对于...</p></a></li><li class="post-news -rds" data-id="60443"><a class="info-wraper" target="_blank" href="https://www.kdjingpai.com/liuliangdexinshoumenbo/" data-wpel-link="internal"><div class="tb-thumb -rds"><img class="-rds" alt="流量的新守门人：如何在生成式搜索时代让 AI 主动引用你的网站"src="https://www.kdjingpai.com/wp-content/themes/nab/assets/img/default-thumb.jpg" data-src="https://www.kdjingpai.com/wp-content/uploads/2025/12/6056a488786efd0.jpg"></div><div class="p-t-w">流量的新守门人：如何在生成式搜索时代让 AI 主动引用你的网站</div><p class="tb-excerpt">互联网的流量逻辑正在发生根本性的重构。过去，我们在 Google 或百度上争夺“十条蓝色链接”的头把交椅；现在，ChatGPT、Claude 和 Perplexity 等 AI 工具正在成为新的守门人。这种转变带来了一个残酷的新现实：即使你...</p></a></li><li class="post-news -rds" data-id="60383"><a class="info-wraper" target="_blank" href="https://www.kdjingpai.com/jingzhunxiufu-google/" data-wpel-link="internal"><div class="tb-thumb -rds"><img class="-rds" alt="精准修复 Google Antigravity 无法登录使用的终极解决方案"src="https://www.kdjingpai.com/wp-content/themes/nab/assets/img/default-thumb.jpg" data-src="https://www.kdjingpai.com/wp-content/uploads/2025/12/c26dc30978be6e4.jpeg"></div><div class="p-t-w">精准修复 Google Antigravity 无法登录使用的终极解决方案</div><p class="tb-excerpt">对于身处特定网络环境的开发者而言，Google 最新发布的 AI IDE —— Antigravity，带来了一种颇为讽刺的体验：软件界面设计得极简优雅，启动速度飞快，但核心功能却完全瘫痪。 最典型的症状莫过于此：启动软件后，UI 渲染完美...</p></a></li><li class="post-news -rds" data-id="60169"><a class="info-wraper" target="_blank" href="https://www.kdjingpai.com/mianfeijianzhanzhinan/" data-wpel-link="internal"><div class="tb-thumb -rds"><img class="-rds" alt="免费建站指南：通过 GitHub 与 Cloudflare 实现自动化部署"src="https://www.kdjingpai.com/wp-content/themes/nab/assets/img/default-thumb.jpg" data-src="https://www.kdjingpai.com/wp-content/uploads/2025/10/2912bb502a46a75.png"></div><div class="p-t-w">免费建站指南：通过 GitHub 与 Cloudflare 实现自动化部署</div><p class="tb-excerpt">在当前的 Web 开发领域，借助强大的云平台实现个人或企业网站的快速、免费托管已成为一种主流选择。Cloudflare 不仅以其领先的 CDN 和安全服务闻名，其 Cloudflare Pages 服务也为开发者提供了一套与 Git 集成的...</p></a></li><li class="post-news -rds" data-id="60122"><a class="info-wraper" target="_blank" href="https://www.kdjingpai.com/shiyongyouhuaxianlu-v/" data-wpel-link="internal"><div class="tb-thumb -rds"><img class="-rds" alt="使用优化线路 VPS 与反向代理，低成本加速后端服务器"src="https://www.kdjingpai.com/wp-content/themes/nab/assets/img/default-thumb.jpg" data-src="https://www.kdjingpai.com/wp-content/uploads/2025/10/c9fd12a4d01d7d9.png"></div><div class="p-t-w">使用优化线路 VPS 与反向代理，低成本加速后端服务器</div><p class="tb-excerpt">如何平衡服务器的性能、网络质量与成本，是许多开发者和服务部署者面临的共同挑战。高配置的服务器往往价格不菲，而具备优质网络线路（如 CN2 GIA）的服务器，其高昂的成本更是让许多预算有限的项目望而却步。 本文将介绍一种高性价比的架构方案：利...</p></a></li><li class="post-news -rds" data-id="59907"><a class="info-wraper" target="_blank" href="https://www.kdjingpai.com/congwenzidaohuamian/" data-wpel-link="internal"><div class="tb-thumb -rds"><img class="-rds" alt="AI 分镜生成教程：用四步工作流将小说转为专业分镜脚本"src="https://www.kdjingpai.com/wp-content/themes/nab/assets/img/default-thumb.jpg" data-src="https://www.kdjingpai.com/wp-content/uploads/2025/09/1a2bc6ec0fcf3bb.png"></div><div class="p-t-w">AI 分镜生成教程：用四步工作流将小说转为专业分镜脚本</div><p class="tb-excerpt">将小说或剧本转化为分镜脚本，是影视、动画和漫画创作中的关键一环。这个过程需要创作者深度解析文本，梳理情节、人物、场景和对话，再通过想象力构建出一系列连续的画面。传统的人工方式不仅耗时，而且工作量巨大。 随着人工智能技术的发展，一个问题自然而...</p></a></li><li class="post-news -rds" data-id="59842"><a class="info-wraper" target="_blank" href="https://www.kdjingpai.com/dify-shizhanjiaocheng/" data-wpel-link="internal"><div class="tb-thumb -rds"><img class="-rds" alt="Dify 实战教程：零成本集成 Qwen-Image，构建多轮对话式 AI 图像编辑应用"src="https://www.kdjingpai.com/wp-content/themes/nab/assets/img/default-thumb.jpg" data-src="https://www.kdjingpai.com/wp-content/uploads/2025/09/a61373e58dec8e3.png"></div><div class="p-t-w">Dify 实战教程：零成本集成 Qwen-Image，构建多轮对话式 AI 图像编辑应用</div><p class="tb-excerpt">前言：构建经济高效的 AI 图像生成与编辑工作流 通义千问 Qwen-Image 作为一款开源的文生图模型，凭借其在复杂文本渲染，尤其是中文字符生成方面的卓越能力，获得了广泛关注。 与主流模型相比，它能在图像中精准地嵌入多行、多段的文字内容...</p></a></li></ul></div>    </div>
+    <div class="tb-sidebar" data-roll="1 2"><div class="widget_text widget widget_custom_html"><div class="textwidget custom-html-widget"><div id="custom-search-sidebar">
+    <style>
+        /* 容器样式 */
+        #custom-search-sidebar {
+            width: 100%;
+            margin: 2px;
+            padding: 10px;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            box-sizing: border-box;
+        }
+        /* 公共版块样式 */
+        .section {
+            margin-bottom: 20px;
+        }
+        .section h3 {
+            margin: 0 0 8px;
+            text-align: left;
+            font-size: 18px;
+            color: #333;
+        }
+        .section p {
+            margin: 0 0 15px;
+            line-height: 1.6;
+            color: #666;
+            font-size: 14px;
+            text-align: left;
+        }
+        /* 搜索部分样式 */
+        #custom-search-input {
+            width: 100%;
+            padding: 12px;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+            margin-bottom: 8px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+        #custom-search-button {
+            width: 100%;
+            padding: 12px;
+            border-radius: 4px;
+            background-color: #ff5722;
+            border: none;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            font-size: 16px;
+        }
+        #custom-search-button:hover {
+            background-color: #e64a19;
+            transform: scale(1.05);
+        }
+        /* 广告部分样式 */
+        #custom-ad {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #eee;
+            border-radius: 4px;
+            background-color: #f9f9f9;
+        }
+    </style>
+
+    <!-- 搜索部分 -->
+    <div class="section" id="search-section">
+        <h3>找不到AI工具？在这试试！</h3>
+        <p>输入关键词，即可 <strong>无障碍访问 必应 搜索</strong>，快速找到本站所有 AI 工具。</p>
+        <input type="text" id="custom-search-input" placeholder="输入关键词，例如：GPT、翻译工具">
+        <button id="custom-search-button">立即搜索</button>
+    </div>
+
+<div id="custom-ad" style="padding: 16px; border: 1px solid #eee; border-radius: 8px; background: #fafafa; text-align: center; max-width: 720px; margin: auto;">
+  <a href="https://github.com/pptt121212/content-auto-manager" target="_blank" rel="noopener noreferrer nofollow" style="text-decoration: none; color: #000; display: inline-block; line-height: 1.5;" data-wpel-link="external">
+     
+     <!-- 主标题 -->
+     <div style="font-size: 20px; font-weight: 700; color: #ff5722; margin-bottom: 6px;">
+       🚀 WordPress AI SEO 自动化套件
+     </div>
+     
+     <!-- 核心卖点行 -->
+     <div style="font-size: 14px; color: #555; margin-bottom: 10px;">
+       自动生成发布高质量文章 · 不改造官网快速提升SEO流量 · 多语言支持助力出海
+     </div>
+     
+     <!-- 单独突出核心功能 -->
+     <div style="display: inline-block; padding: 6px 12px; background-color: #43A047; color: #fff; border-radius: 4px; font-size: 13px; font-weight: 600; margin-bottom: 10px;">
+       💡 智能优化AI提示词 · 持续提升文章排名
+     </div>
+     
+     <!-- CTA按钮 -->
+     <div style="display: inline-block; padding: 8px 16px; background-color: #ff5722; color: #fff; border-radius: 6px; font-size: 14px; font-weight: 600; transition: all 0.3s;">
+       🔧 免费下载插件
+     </div>
+  </a>
+</div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const searchInput = document.getElementById('custom-search-input');
+            const searchButton = document.getElementById('custom-search-button');
+            
+            // 配置 - 修改此处设置您的域名
+            const siteDomain = 'www.kdjingpai.com';
+            
+            function performSearch() {
+                const searchTerm = searchInput.value.trim();
+                if (searchTerm) {
+                    // 创建一个表单元素
+                    const form = document.createElement('form');
+                    form.method = 'GET';
+                    form.action = 'https://www.bing.com/search';
+                    form.target = '_blank';
+                    document.body.appendChild(form);
+                    
+                    // 添加站点限制参数 (q1) - 不会显示在搜索框
+                    const siteParam = document.createElement('input');
+                    siteParam.type = 'hidden';
+                    siteParam.name = 'q1';
+                    siteParam.value = 'site:' + siteDomain;
+                    form.appendChild(siteParam);
+                    
+                    // 添加搜索词参数 (q)
+                    const queryParam = document.createElement('input');
+                    queryParam.type = 'hidden';
+                    queryParam.name = 'q';
+                    queryParam.value = searchTerm;
+                    form.appendChild(queryParam);
+                    
+                    // 添加必应搜索框格式参数
+                    const formParam = document.createElement('input');
+                    formParam.type = 'hidden';
+                    formParam.name = 'form';
+                    formParam.value = 'QBLH';
+                    form.appendChild(formParam);
+                    
+                    // 自动检测用户语言并添加相应参数
+                    const userLang = navigator.language || navigator.userLanguage;
+                    if (userLang) {
+                        const langParts = userLang.split('-');
+                        if (langParts.length > 0) {
+                            // 设置市场和语言
+                            const setLang = document.createElement('input');
+                            setLang.type = 'hidden';
+                            setLang.name = 'setlang';
+                            setLang.value = langParts[0].toLowerCase();
+                            form.appendChild(setLang);
+                            
+                            if (langParts.length > 1) {
+                                const setMkt = document.createElement('input');
+                                setMkt.type = 'hidden';
+                                setMkt.name = 'setmkt';
+                                setMkt.value = userLang.toLowerCase();
+                                form.appendChild(setMkt);
+                            }
+                        }
+                    }
+                    
+                    // 提交表单并移除
+                    form.submit();
+                    document.body.removeChild(form);
+                    
+                    // 不清空搜索框，保留搜索词
+                } else {
+                    alert('请输入关键词进行搜索！');
+                }
+            }
+
+            searchButton.addEventListener('click', performSearch);
+            searchInput.addEventListener('keypress', function(event) {
+                if (event.key === 'Enter') {
+                    performSearch();
+                }
+            });
+        });
+    </script>
+</div></div></div><div class="widget tb-widget-sites"><div class="tb-card-title "><h3>热门AI工具</h3><div class="-title-tabs"></div></div><ul class="tb-side-site tb-row -rds"><li data-id="30372"><a class="info-wraper" data-event="tb_click_handle" data-type="site" data-id="30372" target="_blank" href="https://www.kdjingpai.com/polybuzz/" data-wpel-link="internal"><div class="tb-thumb -rds"><img class="-rds" alt="PolyBuzz：与AI角色互动的免费聊天与角色扮演平台"src="https://www.kdjingpai.com/wp-content/themes/nab/assets/img/default-thumb.jpg" data-src="https://www.kdjingpai.com/wp-content/uploads/2025/04/71dcdbe628eecfb.png"></div><p class="p-t-w">PolyBuzz：与AI角色互动的免费聊天与角色扮演平台</p></a></li><li data-id="7656"><a class="info-wraper" data-event="tb_click_handle" data-type="site" data-id="7656" target="_blank" href="https://www.kdjingpai.com/video-face-swap/" data-wpel-link="internal"><div class="tb-thumb -rds"><img class="-rds" alt="Video Face Swap"src="https://www.kdjingpai.com/wp-content/themes/nab/assets/img/default-thumb.jpg" data-src="https://www.kdjingpai.com/wp-content/uploads/2024/10/af394db834581f0.png"></div><p class="p-t-w">Video Face Swap</p></a></li><li data-id="48207"><a class="info-wraper" data-event="tb_click_handle" data-type="site" data-id="48207" target="_blank" href="https://www.kdjingpai.com/roboneo/" data-wpel-link="internal"><div class="tb-thumb -rds"><img class="-rds" alt="RoboNeo：通过聊天生成和编辑视频与图像的AI工具"src="https://www.kdjingpai.com/wp-content/themes/nab/assets/img/default-thumb.jpg" data-src="https://www.kdjingpai.com/wp-content/uploads/2025/08/38c59f96ee4f5e2.png"></div><p class="p-t-w">RoboNeo：通过聊天生成和编辑视频与图像的AI工具</p></a></li><li data-id="5736"><a class="info-wraper" data-event="tb_click_handle" data-type="site" data-id="5736" target="_blank" href="https://www.kdjingpai.com/facefusion/" data-wpel-link="internal"><div class="tb-thumb -rds"><img class="-rds" alt="FaceFusion：视频换脸增强工具|语音同步视频嘴型动作"src="https://www.kdjingpai.com/wp-content/themes/nab/assets/img/default-thumb.jpg" data-src="https://www.kdjingpai.com/wp-content/uploads/2024/12/3f266995955ab87.png"></div><p class="p-t-w">FaceFusion：视频换脸增强工具|语音同步视频嘴型动作</p></a></li><li data-id="30584"><a class="info-wraper" data-event="tb_click_handle" data-type="site" data-id="30584" target="_blank" href="https://www.kdjingpai.com/unlimited-ai-chat/" data-wpel-link="internal"><div class="tb-thumb -rds"><img class="-rds" alt="Unlimited AI Chat：免费无限制的AI聊天工具"src="https://www.kdjingpai.com/wp-content/themes/nab/assets/img/default-thumb.jpg" data-src="https://www.kdjingpai.com/wp-content/uploads/2025/04/7bdfd780ef2a365.png"></div><p class="p-t-w">Unlimited AI Chat：免费无限制的AI聊天工具</p></a></li><li data-id="5859"><a class="info-wraper" data-event="tb_click_handle" data-type="site" data-id="5859" target="_blank" href="https://www.kdjingpai.com/deepmosaics/" data-wpel-link="internal"><div class="tb-thumb -rds"><img class="-rds" alt="DeepMosaics：自动去除图像和视频中的马赛克，或向其添加马赛克"src="https://www.kdjingpai.com/wp-content/themes/nab/assets/img/default-thumb.jpg" data-src="https://www.kdjingpai.com/wp-content/uploads/2024/12/3f266995955ab87.png"></div><p class="p-t-w">DeepMosaics：自动去除图像和视频中的马赛克，或向其添加马赛克</p></a></li><li data-id="13370"><a class="info-wraper" data-event="tb_click_handle" data-type="site" data-id="13370" target="_blank" href="https://www.kdjingpai.com/codeium/" data-wpel-link="internal"><div class="tb-thumb -rds"><img class="-rds" alt="Codeium（Windsurf Editor）：免费的AI代码补全与聊天工具，Windsurf以对话方式编写完整项目代码"src="https://www.kdjingpai.com/wp-content/themes/nab/assets/img/default-thumb.jpg" data-src="https://www.kdjingpai.com/wp-content/uploads/2024/11/530e86eb7a9da10.png"></div><p class="p-t-w">Codeium（Windsurf Editor）：免费的AI代码补全与聊天工具，Windsurf以对话方式编写完整项目代码</p></a></li><li data-id="15937"><a class="info-wraper" data-event="tb_click_handle" data-type="site" data-id="15937" target="_blank" href="https://www.kdjingpai.com/cursor-free-trial-reset-tool/" data-wpel-link="internal"><div class="tb-thumb -rds"><img class="-rds" alt="Cursor试用期重置工具：解决Cursor试用期限制问题，轻松重置试用期，避免升级到专业版"src="https://www.kdjingpai.com/wp-content/themes/nab/assets/img/default-thumb.jpg" data-src="https://www.kdjingpai.com/wp-content/uploads/2024/12/3f266995955ab87.png"></div><p class="p-t-w">Cursor试用期重置工具：解决Cursor试用期限制问题，轻松重置试用期，避免升级到专业版</p></a></li><li data-id="13644"><a class="info-wraper" data-event="tb_click_handle" data-type="site" data-id="13644" target="_blank" href="https://www.kdjingpai.com/jan/" data-wpel-link="internal"><div class="tb-thumb -rds"><img class="-rds" alt="Jan：开源离线AI助手，ChatGPT 替代品，运行本地AI模型或连接云端AI"src="https://www.kdjingpai.com/wp-content/themes/nab/assets/img/default-thumb.jpg" data-src="https://www.kdjingpai.com/wp-content/uploads/2024/11/757ad0d45da5c78.png"></div><p class="p-t-w">Jan：开源离线AI助手，ChatGPT 替代品，运行本地AI模型或连接云端AI</p></a></li><li data-id="18566"><a class="info-wraper" data-event="tb_click_handle" data-type="site" data-id="18566" target="_blank" href="https://www.kdjingpai.com/sherpa-onnx/" data-wpel-link="internal"><div class="tb-thumb -rds"><img class="-rds" alt="Sherpa-ONNX：使用ONNXRuntime实现离线语音识别和合成"src="https://www.kdjingpai.com/wp-content/themes/nab/assets/img/default-thumb.jpg" data-src="https://www.kdjingpai.com/wp-content/uploads/2024/12/3f266995955ab87.png"></div><p class="p-t-w">Sherpa-ONNX：使用ONNXRuntime实现离线语音识别和合成</p></a></li><li data-id="19690"><a class="info-wraper" data-event="tb_click_handle" data-type="site" data-id="19690" target="_blank" href="https://www.kdjingpai.com/pocketpal-ai/" data-wpel-link="internal"><div class="tb-thumb -rds"><img class="-rds" alt="PocketPal AI"src="https://www.kdjingpai.com/wp-content/themes/nab/assets/img/default-thumb.jpg" data-src="https://www.kdjingpai.com/wp-content/uploads/2025/01/ba33dc646633df0-250x250.webp"></div><p class="p-t-w">PocketPal AI</p></a></li><li data-id="2842"><a class="info-wraper" data-event="tb_click_handle" data-type="site" data-id="2842" target="_blank" href="https://www.kdjingpai.com/doubaoai/" data-wpel-link="internal"><div class="tb-thumb -rds"><img class="-rds" alt="豆包"src="https://www.kdjingpai.com/wp-content/themes/nab/assets/img/default-thumb.jpg" data-src="https://www.kdjingpai.com/wp-content/uploads/2024/07/7a5ac7b5992b821.png"></div><p class="p-t-w">豆包</p></a></li></ul></div><div class="widget tb-widget-posts"><div class="tb-card-title "><h3>最新发布</h3><div class="-title-tabs"></div></div><ul class="tb-side-post -rds"><li class="-rds tb-side-news" data-id="62435"><a class="info-wraper" target="_blank" href="https://www.kdjingpai.com/google-antigravity-ai-2/" data-wpel-link="internal"><div class="tb-thumb -rds"><img class="-rds" alt="Google Antigravity 账号大清洗：OAuth 滥用引发的大规模封号潮与账号恢复方法"src="https://www.kdjingpai.com/wp-content/themes/nab/assets/img/default-thumb.jpg" data-src="https://www.kdjingpai.com/wp-content/themes/nab/assets/img/default-thumb.jpg"></div><div class="p-t-w">Google Antigravity 账号大清洗：OAuth 滥用引发的大规模封号潮与账号恢复方法</div><div class="-metas"><span class="-meta -date"> 02-14</span><span class="-meta -views tbfa fa-views"> 215</span></div></a></li><li class="-rds tb-side-news" data-id="60835"><a class="info-wraper" target="_blank" href="https://www.kdjingpai.com/lingchengbenbushuzuiba/" data-wpel-link="internal"><div class="tb-thumb -rds"><img class="-rds" alt="零成本部署最强开源Agent：在GitHub Codespaces中构建OpenClaw与飞书私有智囊团"src="https://www.kdjingpai.com/wp-content/themes/nab/assets/img/default-thumb.jpg" data-src="https://www.kdjingpai.com/wp-content/uploads/2026/02/440703c8cc758cc.png"></div><div class="p-t-w">零成本部署最强开源Agent：在GitHub Codespaces中构建OpenClaw与飞书私有智囊团</div><div class="-metas"><span class="-meta -date"> 02-05</span><span class="-meta -views tbfa fa-views"> 524</span></div></a></li><li class="-rds tb-side-news" data-id="60644"><a class="info-wraper" target="_blank" href="https://www.kdjingpai.com/nixiangtishicigongbai/" data-wpel-link="internal"><div class="tb-thumb -rds"><img class="-rds" alt="逆向提示词工程，获取 Z.ai 全部Skills原文"src="https://www.kdjingpai.com/wp-content/themes/nab/assets/img/default-thumb.jpg" data-src="https://www.kdjingpai.com/wp-content/uploads/2026/01/302e77603c3bea6.png"></div><div class="p-t-w">逆向提示词工程，获取 Z.ai 全部Skills原文</div><div class="-metas"><span class="-meta -date"> 01-16</span><span class="-meta -views tbfa fa-views"> 678</span></div></a></li><li class="-rds tb-side-news" data-id="60443"><a class="info-wraper" target="_blank" href="https://www.kdjingpai.com/liuliangdexinshoumenbo/" data-wpel-link="internal"><div class="tb-thumb -rds"><img class="-rds" alt="流量的新守门人：如何在生成式搜索时代让 AI 主动引用你的网站"src="https://www.kdjingpai.com/wp-content/themes/nab/assets/img/default-thumb.jpg" data-src="https://www.kdjingpai.com/wp-content/uploads/2025/12/6056a488786efd0.jpg"></div><div class="p-t-w">流量的新守门人：如何在生成式搜索时代让 AI 主动引用你的网站</div><div class="-metas"><span class="-meta -date"> 12-10</span><span class="-meta -views tbfa fa-views"> 1.2 K</span></div></a></li><li class="-rds tb-side-news" data-id="60383"><a class="info-wraper" target="_blank" href="https://www.kdjingpai.com/jingzhunxiufu-google/" data-wpel-link="internal"><div class="tb-thumb -rds"><img class="-rds" alt="精准修复 Google Antigravity 无法登录使用的终极解决方案"src="https://www.kdjingpai.com/wp-content/themes/nab/assets/img/default-thumb.jpg" data-src="https://www.kdjingpai.com/wp-content/uploads/2025/12/c26dc30978be6e4.jpeg"></div><div class="p-t-w">精准修复 Google Antigravity 无法登录使用的终极解决方案</div><div class="-metas"><span class="-meta -date"> 12-05</span><span class="-meta -views tbfa fa-views"> 3.2 K</span></div></a></li><li class="-rds tb-side-news" data-id="60330"><a class="info-wraper" target="_blank" href="https://www.kdjingpai.com/google-antigravity-ai/" data-wpel-link="internal"><div class="tb-thumb -rds"><img class="-rds" alt="Google Antigravity 泄露分析：解构 Agentic IDE 的“自然语言操作系统”"src="https://www.kdjingpai.com/wp-content/themes/nab/assets/img/default-thumb.jpg" data-src="https://www.kdjingpai.com/wp-content/themes/nab/assets/img/default-thumb.jpg"></div><div class="p-t-w">Google Antigravity 泄露分析：解构 Agentic IDE 的“自然语言操作系统”</div><div class="-metas"><span class="-meta -date"> 11-24</span><span class="-meta -views tbfa fa-views"> 2.0 K</span></div></a></li><li class="-rds tb-side-news" data-id="60233"><a class="info-wraper" target="_blank" href="https://www.kdjingpai.com/5aineirongguanjiaa/" data-wpel-link="internal"><div class="tb-thumb -rds"><img class="-rds" alt="5.AI内容管家：配置用于生成文章选题的发布规则"src="https://www.kdjingpai.com/wp-content/themes/nab/assets/img/default-thumb.jpg" data-src="https://www.kdjingpai.com/wp-content/uploads/2025/11/50ea05701ce6e97.png"></div><div class="p-t-w">5.AI内容管家：配置用于生成文章选题的发布规则</div><div class="-metas"><span class="-meta -date"> 11-02</span><span class="-meta -views tbfa fa-views"> 1.8 K</span></div></a></li><li class="-rds tb-side-news" data-id="60220"><a class="info-wraper" target="_blank" href="https://www.kdjingpai.com/4aineirongguanjiaa/" data-wpel-link="internal"><div class="tb-thumb -rds"><img class="-rds" alt="4.AI内容管家：配置用于生成文章和图片的免费API"src="https://www.kdjingpai.com/wp-content/themes/nab/assets/img/default-thumb.jpg" data-src="https://www.kdjingpai.com/wp-content/uploads/2025/11/53069451c2d1030.png"></div><div class="p-t-w">4.AI内容管家：配置用于生成文章和图片的免费API</div><div class="-metas"><span class="-meta -date"> 11-02</span><span class="-meta -views tbfa fa-views"> 1.9 K</span></div></a></li><li class="-rds tb-side-news" data-id="60169"><a class="info-wraper" target="_blank" href="https://www.kdjingpai.com/mianfeijianzhanzhinan/" data-wpel-link="internal"><div class="tb-thumb -rds"><img class="-rds" alt="免费建站指南：通过 GitHub 与 Cloudflare 实现自动化部署"src="https://www.kdjingpai.com/wp-content/themes/nab/assets/img/default-thumb.jpg" data-src="https://www.kdjingpai.com/wp-content/uploads/2025/10/2912bb502a46a75.png"></div><div class="p-t-w">免费建站指南：通过 GitHub 与 Cloudflare 实现自动化部署</div><div class="-metas"><span class="-meta -date"> 10-26</span><span class="-meta -views tbfa fa-views"> 2.4 K</span></div></a></li><li class="-rds tb-side-news" data-id="60122"><a class="info-wraper" target="_blank" href="https://www.kdjingpai.com/shiyongyouhuaxianlu-v/" data-wpel-link="internal"><div class="tb-thumb -rds"><img class="-rds" alt="使用优化线路 VPS 与反向代理，低成本加速后端服务器"src="https://www.kdjingpai.com/wp-content/themes/nab/assets/img/default-thumb.jpg" data-src="https://www.kdjingpai.com/wp-content/uploads/2025/10/c9fd12a4d01d7d9.png"></div><div class="p-t-w">使用优化线路 VPS 与反向代理，低成本加速后端服务器</div><div class="-metas"><span class="-meta -date"> 10-25</span><span class="-meta -views tbfa fa-views"> 2.3 K</span></div></a></li><li class="-rds tb-side-news" data-id="60092"><a class="info-wraper" target="_blank" href="https://www.kdjingpai.com/minimax-fabu-m2-ba/" data-wpel-link="internal"><div class="tb-thumb -rds"><img class="-rds" alt="MiniMax 发布 M2 预览模型，对标 Claude 并聚焦编程与 Agent 应用"src="https://www.kdjingpai.com/wp-content/themes/nab/assets/img/default-thumb.jpg" data-src="https://www.kdjingpai.com/wp-content/uploads/2025/10/16a7ecba9d3d8fd.png"></div><div class="p-t-w">MiniMax 发布 M2 预览模型，对标 Claude 并聚焦编程与 Agent 应用</div><div class="-metas"><span class="-meta -date"> 10-25</span><span class="-meta -views tbfa fa-views"> 3.1 K</span></div></a></li><li class="-rds tb-side-news" data-id="60004"><a class="info-wraper" target="_blank" href="https://www.kdjingpai.com/3aineirongguanjiaa/" data-wpel-link="internal"><div class="tb-thumb -rds"><img class="-rds" alt="3.AI内容管家：AI快速生成文章流程"src="https://www.kdjingpai.com/wp-content/themes/nab/assets/img/default-thumb.jpg" data-src="https://www.kdjingpai.com/wp-content/uploads/2025/10/e53036c7e96ac1a.png"></div><div class="p-t-w">3.AI内容管家：AI快速生成文章流程</div><div class="-metas"><span class="-meta -date"> 10-14</span><span class="-meta -views tbfa fa-views"> 2.8 K</span></div></a></li></ul></div><div class="widget tb-widget-sites"><div class="tb-card-title "><h3>最新AI工具</h3><div class="-title-tabs"></div></div><ul class="tb-side-site tb-row -rds"><li data-id="60848"><a class="info-wraper" data-event="tb_click_handle" data-type="site" data-id="60848" target="_blank" href="https://www.kdjingpai.com/tchepaikuaisufaai/" data-wpel-link="internal"><div class="tb-thumb -rds"><img class="-rds" alt="Tchepai：快速发现并直达全球实用AI工具的资源导航平台"src="https://www.kdjingpai.com/wp-content/themes/nab/assets/img/default-thumb.jpg" data-src="https://www.kdjingpai.com/wp-content/uploads/2026/02/20260206172956_989b8c2b.png"></div><p class="p-t-w">Tchepai：快速发现并直达全球实用AI工具的资源导航平台</p></a></li><li data-id="60840"><a class="info-wraper" data-event="tb_click_handle" data-type="site" data-id="60840" target="_blank" href="https://www.kdjingpai.com/workbuddy/" data-wpel-link="internal"><div class="tb-thumb -rds"><img class="-rds" alt="WorkBuddy：操作本地文件的桌面级 AI 智能体"src="https://www.kdjingpai.com/wp-content/themes/nab/assets/img/default-thumb.jpg" data-src="https://www.kdjingpai.com/wp-content/uploads/2026/02/0d9ecd2a5e5f405.png"></div><p class="p-t-w">WorkBuddy：操作本地文件的桌面级 AI 智能体</p></a></li><li data-id="60782"><a class="info-wraper" data-event="tb_click_handle" data-type="site" data-id="60782" target="_blank" href="https://www.kdjingpai.com/openclaw-skillsba/" data-wpel-link="internal"><div class="tb-thumb -rds"><img class="-rds" alt="OpenClaw Skills：免费技能与脚本下载库，扩展Moltbook自动化与SEO工作流"src="https://www.kdjingpai.com/wp-content/themes/nab/assets/img/default-thumb.jpg" data-src="https://www.kdjingpai.com/wp-content/uploads/2026/02/e3eda70bfafdf13.png"></div><p class="p-t-w">OpenClaw Skills：免费技能与脚本下载库，扩展Moltbook自动化与SEO工作流</p></a></li><li data-id="60803"><a class="info-wraper" data-event="tb_click_handle" data-type="site" data-id="60803" target="_blank" href="https://www.kdjingpai.com/ai-bestjichengsora/" data-wpel-link="internal"><div class="tb-thumb -rds"><img class="-rds" alt="AI Best：集成Sora与GPT-4o的多模型AI图像及视频生成平台"src="https://www.kdjingpai.com/wp-content/themes/nab/assets/img/default-thumb.jpg" data-src="https://www.kdjingpai.com/wp-content/uploads/2026/02/20260204224118_8493c5f4-250x250.png"></div><p class="p-t-w">AI Best：集成Sora与GPT-4o的多模型AI图像及视频生成平台</p></a></li><li data-id="60805"><a class="info-wraper" data-event="tb_click_handle" data-type="site" data-id="60805" target="_blank" href="https://www.kdjingpai.com/userjam/" data-wpel-link="internal"><div class="tb-thumb -rds"><img class="-rds" alt="Userjam：将SaaS产品数据转化为自然语言故事的AI分析工具"src="https://www.kdjingpai.com/wp-content/themes/nab/assets/img/default-thumb.jpg" data-src="https://www.kdjingpai.com/wp-content/uploads/2026/02/20260205002420_48fc86a4-250x250.png"></div><p class="p-t-w">Userjam：将SaaS产品数据转化为自然语言故事的AI分析工具</p></a></li><li data-id="60769"><a class="info-wraper" data-event="tb_click_handle" data-type="site" data-id="60769" target="_blank" href="https://www.kdjingpai.com/xai-grok-imagine-api/" data-wpel-link="internal"><div class="tb-thumb -rds"><img class="-rds" alt="xAI Grok Imagine API：生产环境开箱即用的多模态音视频生成服务"src="https://www.kdjingpai.com/wp-content/themes/nab/assets/img/default-thumb.jpg" data-src="https://www.kdjingpai.com/wp-content/uploads/2025/08/20250807210248_f89cae87.png"></div><p class="p-t-w">xAI Grok Imagine API：生产环境开箱即用的多模态音视频生成服务</p></a></li><li data-id="60764"><a class="info-wraper" data-event="tb_click_handle" data-type="site" data-id="60764" target="_blank" href="https://www.kdjingpai.com/qoderwork/" data-wpel-link="internal"><div class="tb-thumb -rds"><img class="-rds" alt="QoderWork：能够自动执行复杂任务的智能桌面代理助手"src="https://www.kdjingpai.com/wp-content/themes/nab/assets/img/default-thumb.jpg" data-src="https://www.kdjingpai.com/wp-content/uploads/2026/01/128fce61552f39e.png"></div><p class="p-t-w">QoderWork：能够自动执行复杂任务的智能桌面代理助手</p></a></li><li data-id="60753"><a class="info-wraper" data-event="tb_click_handle" data-type="site" data-id="60753" target="_blank" href="https://www.kdjingpai.com/chartgen-aitongguo/" data-wpel-link="internal"><div class="tb-thumb -rds"><img class="-rds" alt="ChartGen AI：通过自然语言对话将Excel数据转换为专业图表的AI可视化工具"src="https://www.kdjingpai.com/wp-content/themes/nab/assets/img/default-thumb.jpg" data-src="https://www.kdjingpai.com/wp-content/uploads/2026/01/32300b110ee9f3f.png"></div><p class="p-t-w">ChartGen AI：通过自然语言对话将Excel数据转换为专业图表的AI可视化工具</p></a></li><li data-id="60759"><a class="info-wraper" data-event="tb_click_handle" data-type="site" data-id="60759" target="_blank" href="https://www.kdjingpai.com/proxyllm/" data-wpel-link="internal"><div class="tb-thumb -rds"><img class="-rds" alt="ProxyLLM：将任何网页版AI聊天转化为API接口的本地代理工具"src="https://www.kdjingpai.com/wp-content/themes/nab/assets/img/default-thumb.jpg" data-src="https://www.kdjingpai.com/wp-content/uploads/2024/12/3f266995955ab87.png"></div><p class="p-t-w">ProxyLLM：将任何网页版AI聊天转化为API接口的本地代理工具</p></a></li><li data-id="60755"><a class="info-wraper" data-event="tb_click_handle" data-type="site" data-id="60755" target="_blank" href="https://www.kdjingpai.com/keiro/" data-wpel-link="internal"><div class="tb-thumb -rds"><img class="-rds" alt="Keiro：专为AI智能体打造的高性价比搜索与网页抓取API服务"src="https://www.kdjingpai.com/wp-content/themes/nab/assets/img/default-thumb.jpg" data-src="https://www.kdjingpai.com/wp-content/uploads/2026/01/65b02ce7420d349.png"></div><p class="p-t-w">Keiro：专为AI智能体打造的高性价比搜索与网页抓取API服务</p></a></li><li data-id="60699"><a class="info-wraper" data-event="tb_click_handle" data-type="site" data-id="60699" target="_blank" href="https://www.kdjingpai.com/agentation/" data-wpel-link="internal"><div class="tb-thumb -rds"><img class="-rds" alt="Agentation：为AI编程助手生成前端UI上下文的标注工具"src="https://www.kdjingpai.com/wp-content/themes/nab/assets/img/default-thumb.jpg" data-src="https://www.kdjingpai.com/wp-content/uploads/2026/01/a61f92560f18136.png"></div><p class="p-t-w">Agentation：为AI编程助手生成前端UI上下文的标注工具</p></a></li><li data-id="60686"><a class="info-wraper" data-event="tb_click_handle" data-type="site" data-id="60686" target="_blank" href="https://www.kdjingpai.com/antigravity-manager/" data-wpel-link="internal"><div class="tb-thumb -rds"><img class="-rds" alt="Antigravity-Manager：Antigravity账号集成工具，提供本地API中转站"src="https://www.kdjingpai.com/wp-content/themes/nab/assets/img/default-thumb.jpg" data-src="https://www.kdjingpai.com/wp-content/uploads/2024/12/3f266995955ab87.png"></div><p class="p-t-w">Antigravity-Manager：Antigravity账号集成工具，提供本地API中转站</p></a></li></ul></div></div></div>
+<div class="tb-rtools"><div class="-item -rds scroll-top tb-hover-trigger" data-event="scroll_top"><span class="-info tbfa fa-go-top"></span><div class="tb-tooltip -l-c -pop"><div class="-inner -rds"><p class="-desc">回顶部</p></div></div></div></div><footer class="tb-main-wraper"><div class="tb-footer"><div class="-by">Copyright © 2023<a class="-item" rel="nofollow" target="_blank" href="http://beian.miit.gov.cn" data-wpel-link="external">京ICP备2024074324号-2</a></div></div></footer><div class="tb-modal -fase-search"><div class="-mask" data-event="hide_search"></div><div class="m-inner -l -rds"><span class="tbfa fa-close" data-event="hide_search"></span><div class="search-banner -normal"><h2 class="s-title">快速查询站内AI工具</h2><form class="tb-search -rds -pc" action=""><ul class="tb-s-cur"><li class="s-item" data-id="13" data-url="https://www.bing.com/search?q1=site%3Awww.kdjingpai.com&q=%keyword%" data-event="search_type_change">Bing</li></ul><input class="" required maxlength="100" autocomplete="off" value="" type="text" name="s" placeholder=""><button aria-label="search" class="tbfa fa-search" type="submit"></button></form><form class="tb-search -rds -m" action="https://www.kdjingpai.com?type=sites&s=%keyword%"><input required maxlength="100" autocomplete="off" value="" type="text" name="s" placeholder=""><button aria-label="search" class="tbfa fa-search" type="submit"></button></form><div class="menu-hot"><span class="-label">热门搜索：</span><ul class="hot-menu"><li id="menu-item-31008" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-31008 depth-0"><a href="https://www.kdjingpai.com/knowledge/" data-wpel-link="internal">AI知识</a></li>
+</ul></div></div></div></div><div class="tb-modal -share-modal"><div class="-mask" data-event="hide_share"></div><div class="m-inner -rds"><span class="tbfa fa-close" data-event="hide_share"></span><div class="social-share-content"><div class="wechat-qrcode"><img alt="qrcode" src="https://www.kdjingpai.com/wp-content/themes/nab/action/qrcode.php?t=https://www.kdjingpai.com/2025nian8daai-agentai/"><p>微信扫码分享</p></div><div class="-others" style="width:280px"><span class="-s-item tbfa fa-qq" data-type="qq" data-event="share"></span><span class="-s-item tbfa fa-weibo" data-type="weibo" data-event="share"></span><span class="-s-item tbfa fa-copy" data-type="copy" data-event="share"></span><span class="-s-item tbfa fa-twitter" data-type="twitter" data-event="share"></span><span class="-s-item tbfa fa-facebook" data-type="facebook" data-event="share"></span></div><div class="-msg"></div></div></div></div></div>
+<script>
+    window.tbCtx={"themeUri":"https:\/\/www.kdjingpai.com\/wp-content\/themes\/nab","ajaxUri":"https:\/\/www.kdjingpai.com\/wp-admin\/admin-ajax.php","article_swiper":0,"ver":"1.0.0","find_url":"https:\/\/www.kdjingpai.com\/wp-login.php?action=lostpassword","event":[],"share_img":"https:\/\/www.kdjingpai.com\/wp-content\/uploads\/2025\/07\/d37f631e6d05759.png","is_home":0,"blog_url":"https:\/\/www.kdjingpai.com","vercode":1,"vc_params":""}</script>
+<template id="tp-language" data-tp-language="zh_CN"></template><script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/wp-*.php","/wp-admin/*","/wp-content/uploads/*","/wp-content/*","/wp-content/plugins/*","/wp-content/themes/nab-child/*","/wp-content/themes/nab/*","/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?39c4aa037f56898e3b6d7ac71d2cb3ba";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script><script type="text/javascript" id="main-js-extra">
+/* <![CDATA[ */
+var tbl = {"img_size":"200","T001":"\u5f85\u5ba1\u6838","T002":"\u56de\u590d","T004":"\u5df2\u590d\u5236\u94fe\u63a5","T005":"\u9a8c\u8bc1\u7801","T006":"\u8bf7\u8f93\u5165\u9a8c\u8bc1\u7801","T007":"\u63d0\u4ea4","T008":"\u9a8c\u8bc1\u7801\u9519\u8bef","T009":"\u5fae\u4fe1\u626b\u7801\u5206\u4eab","T010":"\u767b\u5f55","T011":"\u7528\u6237\u540d\u6216\u90ae\u7bb1","T012":"\u8fd8\u6ca1\u6709\u8d26\u53f7\uff1f\u73b0\u5728","T013":"\u6ce8\u518c","T014":"\u5fd8\u8bb0\u5bc6\u7801 ?","T015":"\u8bf7\u8f93\u5165\u7528\u6237\u540d","T016":"\u5df2\u6709\u8d26\u53f7\uff0c ","T017":"\u8bf7\u586b\u5199\u7528\u6237\u540d\u3001\u5bc6\u7801","T018":"\u8bf7\u586b\u5199\u7528\u6237\u540d\u3001\u90ae\u7bb1\u3001\u5bc6\u7801","T019":"\u7528\u6237\u540d\u662f\u5b57\u6bcd\u5f00\u5934\u7684\u5b57\u6bcd\u3001\u6570\u5b57\u3001\u4e0b\u5212\u7ebf\u7ec4\u5408\u76842-20\u4f4d\u5b57\u7b26","T020":"\u90ae\u7bb1\u683c\u5f0f\u9519\u8bef","T021":"\u5185\u5bb9\u4e0d\u80fd\u4e3a\u7a7a","T023":"\u8bf7\u586b\u5199\u6709\u6548\u7684\u90ae\u7bb1\u5730\u5740","T024":"\u56fe\u7247\u683c\u5f0f\u4e0d\u6b63\u786e","T025":"\u56fe\u7247\u8bf7\u4e0d\u8d85\u8fc7 %VAR% KB","T027":"\u7f51\u7ad9\u540d\u79f0\u4e0d\u80fd\u4e3a\u7a7a\uff0c\u4e14\u5c0f\u4e8e50\u4e2a\u5b57\u7b26","T028":"\u5185\u5bb9\u4e0d\u80fd\u4e3a\u7a7a\uff0c\u4e14\u4ecb\u4e8e10-10000\u5b57\u4e4b\u95f4","T030":"\u7528\u6237\u540d\uff08\u90ae\u7bb1\uff09\u6216\u5bc6\u7801\u9519\u8bef","T031":"\u4f60\u5df2\u7ecf\u767b\u5f55","T032":"\u7528\u6237\u540d\u9519\u8bef","T033":"\u90ae\u7bb1\u9519\u8bef","T034":"\u6210\u529f\u767b\u5f55","T035":"\u7528\u6237\u540d\u5df2\u5b58\u5728","T036":"\u90ae\u7bb1\u5df2\u5b58\u5728","T037":"\u6ce8\u518c\u5931\u8d25\uff0c\u8bf7\u7a0d\u540e\u518d\u8bd5","T038":"\u6ce8\u518c\u6210\u529f","T040":"\u9000\u51fa\u6210\u529f","T041":"\u8bf7\u9009\u62e9\u56fe\u7247","T042":"\u56fe\u7247\u4e0a\u4f20\u5931\u8d25\uff0c\u8bf7\u7a0d\u540e\u518d\u8bd5","T043":"\u56fe\u7247\u4e0a\u4f20\u6210\u529f","T044":"\u6295\u7a3f\u672a\u5f00\u542f","T045":"\u4e24\u6b21\u6295\u7a3f\u65f6\u95f4\u95f4\u9694\u592a\u77ed\uff0c\u8bf7\u7a0d\u5019\u518d\u6765","T046":"\u9009\u62e9\u7684\u5206\u7c7b\u4e0d\u5b58\u5728","T047":"\u7f51\u7ad9\u540d\u79f0\u91cd\u590d","T048":"\u6295\u7a3f\u5931\u8d25\uff0c\u8bf7\u7a0d\u540e\u518d\u8bd5","T049":"\u6295\u7a3f\u6210\u529f\uff0c\u7b49\u5f85\u5ba1\u6838\u4e2d","T050":"url \u4e0d\u5b58\u5728","T051":"\u8bf7\u5728\u3010\u5916\u89c2 - \u4e3b\u9898\u8bbe\u7f6e - \u5206\u4eab\u3011\u4e2d\u8bbe\u7f6eappID\u548cappsecret","T052":"\u5f53\u524d\u6587\u7ae0\u5df2\u5220\u9664\u6216\u672a\u53d1\u5e03\uff01","T053":"\u8bc4\u8bba\u5df2\u5173\u95ed\uff01","T054":"\u8bc4\u8bba\u6210\u529f","T055":"\u70b9\u8d5e\u6210\u529f","T056":"\u5df2\u53d6\u6d88\u70b9\u8d5e","T057":"\u8bf7\u5148\u767b\u5f55","T058":"\u53c2\u6570\u5f02\u5e38\uff0c\u8bf7\u91cd\u8bd5","T059":"\u6536\u85cf\u6210\u529f","T060":"\u5df2\u53d6\u6d88\u6536\u85cf","T061":"\u5bc6\u7801","T062":"\u90ae\u7bb1","T063":"\u5bc6\u7801\u81f3\u5c116\u4f4d\u5b57\u7b26","T064":"\u8bf7\u8f93\u5165\u6709\u6548\u5173\u952e\u8bcd","T065":"24\u5c0f\u65f6\u5185\u6700\u591a\u53ef\u4e0a\u4f20 %VAR% \u5f20\u56fe\u7247\uff01","T066":"\u8bf7\u6b63\u786e\u586b\u5199\u7f51\u5740","T067":"\u8bf7\u9009\u62e9\u6240\u5c5e\u5206\u7c7b","T068":"\u672a\u5f00\u653e\u6ce8\u518c","T069":"\u4f60\u5df2\u8d5e"};
+//# sourceURL=main-js-extra
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.kdjingpai.com/wp-content/themes/nab/assets/js/main.js?ver=1.0.0" id="main-js"></script>
+<script type="text/javascript" src="https://www.kdjingpai.com/wp-includes/js/comment-reply.min.js?ver=6.9.1" id="comment-reply-js" async="async" data-wp-strategy="async" fetchpriority="low"></script>
+<script type="text/javascript" id="wbp-magicpost-js-before">
+/* <![CDATA[ */
+ var wb_magicpost_cnf={"ver":"2.0.0","assets_ver":"2.0.0","pd_name":"MagicPost","dir":"https:\/\/www.kdjingpai.com\/wp-content\/plugins\/magicpost\/","ajax_url":"https:\/\/www.kdjingpai.com\/wp-admin\/admin-ajax.php","pid":34349,"uid":0,"share_switch":"0","dl_switch":"1","locale":"zh_CN"};
+//# sourceURL=wbp-magicpost-js-before
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.kdjingpai.com/wp-content/plugins/magicpost/assets/wbp_magicpost.js?ver=2.0.0" id="wbp-magicpost-js"></script>
+<script type="text/javascript" id="nab-child-script-js-extra">
+/* <![CDATA[ */
+var nabChildParams = {"siteKey":"0x4AAAAAAAf0kGyF1Cqk1-7C"};
+//# sourceURL=nab-child-script-js-extra
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.kdjingpai.com/wp-content/themes/nab-child/assets/js/nab-child-script.js?ver=1.1" id="nab-child-script-js"></script>
+<script type="text/javascript" async defer src="https://challenges.cloudflare.com/turnstile/v0/api.js" id="cf-turnstile-api-js"></script>
+    <script>
+    (function($){
+        $(document).ready(function(){
+            if(window.tbCtx) {
+                // Inject Nonce
+                tbCtx.sign_nonce = '5c284408d4';
+
+                // Override Sign In
+                tbCtx.event.cb_sign_in = function() {
+                    var e = function() {
+                        var e = $(".tb-in").serializeObject();
+                        if (!e.action) throw "ERROR 1";
+                        if (!e.name || !e.password) return tbCtx.notice("T017", "e"), 0;
+                        // Add Nonce
+                        e.nonce = tbCtx.sign_nonce;
+                        return e;
+                    }();
+                    e ? $.post(tbCtx.ajaxUri, e, (function(t) {
+                        tbCtx.rm_disable();
+                        if (!t.result) {
+                            var msg = (window.tbl && window.tbl[t.code]) ? window.tbl[t.code] : t.code;
+                            tbCtx.notice(msg, "e");
+                            if ("T031" == t.code) tbCtx.event.hide_sign();
+                            return;
+                        }
+                        tbCtx.notice(t.code, "s");
+                        tbCtx.event.hide_sign();
+                        location.reload();
+                    }), "json") : tbCtx.rm_disable();
+                };
+
+                // Override Sign Up
+                tbCtx.event.cb_sign_up = function() {
+                    var e = function() {
+                        var e = $(".tb-up").serializeObject();
+                        if (!e.action) throw "ERROR 2";
+                        if (!e.name || !e.email || !e.password) return void tbCtx.notice("T018", "e");
+                        if (tbCtx.validator && !tbCtx.validator.checkName(e.name)) return void tbCtx.notice("T019", "e");
+                        if (tbCtx.validator && !tbCtx.validator.checkEmail(e.email)) return void tbCtx.notice("T020", "e");
+                        if (tbCtx.validator && !tbCtx.validator.checkPassword(e.password)) return void tbCtx.notice("T063", "e");
+                        // Add Nonce
+                        e.nonce = tbCtx.sign_nonce;
+                        return e;
+                    }();
+                    e ? $.post(tbCtx.ajaxUri, e, (function(e) {
+                        tbCtx.rm_disable();
+                        if (!e.result) {
+                            var msg = (window.tbl && window.tbl[e.code]) ? window.tbl[e.code] : e.code;
+                            tbCtx.notice(msg, "e");
+                            if ("T031" == e.code) tbCtx.event.hide_sign();
+                            return;
+                        }
+                        var sMsg = (window.tbl && window.tbl[e.code]) ? window.tbl[e.code] : e.code;
+                        tbCtx.notice(sMsg, "T039" == e.code ? "e" : "s");
+                        if (e.result) {
+                            $('.tb-up input[name="name"]').val("");
+                            $('.tb-up input[name="email"]').val("");
+                            $('.tb-up input[name="password"]').val("");
+                            tbCtx.event.show_in();
+                        }
+                    }), "json") : tbCtx.rm_disable();
+                };
+            }
+        });
+    })(jQuery);
+    </script>
+    
+<nav
+    class="trp-language-switcher trp-floating-switcher trp-ls-dropdown trp-switcher-position-bottom"
+    style="--bg:#ffffff;--bg-hover:#0000000D;--text:#143852;--text-hover:#1D2327;--border:1px solid #1438521A;--border-radius:8px 8px 0px 0px;--flag-radius:2px;--flag-size:18px;--aspect-ratio:4/3;--font-size:14px;--switcher-width:auto;--switcher-padding:10px 0;--transition-duration:0.2s;--bottom:0px;--right:10vw"
+    role="navigation"
+    aria-label="Website language selector"
+    data-no-translation
+>
+    
+            <div class="trp-language-switcher-inner">
+            <div class="trp-language-item trp-language-item__current" title="简体中文" role="button" tabindex="0" aria-expanded="false" aria-label="Change language" aria-controls="trp-switcher-dropdown-list" data-no-translation><img src="https://www.kdjingpai.com/wp-content/plugins/translatepress-multilingual/assets/flags/4x3/zh_CN.svg" class="trp-flag-image" alt="" role="presentation" loading="lazy" decoding="async" width="18" height="14" /><span class="trp-language-item-name">简体中文</span></div>
+            <div
+                class="trp-switcher-dropdown-list"
+                id="trp-switcher-dropdown-list"
+                role="group"
+                aria-label="Available languages"
+                hidden
+                inert
+            >
+                                    <a href="https://www.kdjingpai.com/en/2025nian8daai-agentai/" class="trp-language-item" title="English" data-no-translation="" data-wpel-link="internal"><img src="https://www.kdjingpai.com/wp-content/plugins/translatepress-multilingual/assets/flags/4x3/en_US.svg" class="trp-flag-image" alt="" role="presentation" loading="lazy" decoding="async" width="18" height="14" /><span class="trp-language-item-name">English</span></a>                                    <a href="https://www.kdjingpai.com/ja/2025nian8daai-agentai/" class="trp-language-item" title="日本語" data-no-translation="" data-wpel-link="internal"><img src="https://www.kdjingpai.com/wp-content/plugins/translatepress-multilingual/assets/flags/4x3/ja.svg" class="trp-flag-image" alt="" role="presentation" loading="lazy" decoding="async" width="18" height="14" /><span class="trp-language-item-name">日本語</span></a>                                    <a href="https://www.kdjingpai.com/de/2025nian8daai-agentai/" class="trp-language-item" title="Deutsch" data-no-translation="" data-wpel-link="internal"><img src="https://www.kdjingpai.com/wp-content/plugins/translatepress-multilingual/assets/flags/4x3/de_DE.svg" class="trp-flag-image" alt="" role="presentation" loading="lazy" decoding="async" width="18" height="14" /><span class="trp-language-item-name">Deutsch</span></a>                                    <a href="https://www.kdjingpai.com/pt/2025nian8daai-agentai/" class="trp-language-item" title="Português do Brasil" data-no-translation="" data-wpel-link="internal"><img src="https://www.kdjingpai.com/wp-content/plugins/translatepress-multilingual/assets/flags/4x3/pt_BR.svg" class="trp-flag-image" alt="" role="presentation" loading="lazy" decoding="async" width="18" height="14" /><span class="trp-language-item-name">Português do Brasil</span></a>                            </div>
+        </div>
+
+    </nav>
+</body>
+
+</html>
